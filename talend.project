@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_XfGMUYG-EeeT-qPSauScIg" label="TIMR" description="" language="java" technicalLabel="TIMR" local="true" author="_XgVicIG-EeeT-qPSauScIg" productVersion="Talend Open Studio for Big Data-6.4.1.20170623_1246" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_XfGMUYG-EeeT-qPSauScIg" label="OpenIZ" description="" language="java" technicalLabel="OPENIZ" local="true" author="_XgVicIG-EeeT-qPSauScIg" productVersion="Talend Open Studio for Data Integration-6.4.1.20170623_1246" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_X5wIAIG-EeeT-qPSauScIg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_X5wIAYG-EeeT-qPSauScIg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_X5wIAoG-EeeT-qPSauScIg" label="production" code="PROD"/>
@@ -101,8 +101,6 @@
       <relatedItems xmi:id="_OmHEbYNpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - pat_tbl" version="Latest" type="schema"/>
       <relatedItems xmi:id="_OmHEboNpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - fac_plc_ded_sdl_tbl" version="Latest" type="schema"/>
       <relatedItems xmi:id="_OmHEb4NpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - psn_tbl" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_OmHEcINpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - mmat_tbl" version="Latest" type="schema"/>
-      <relatedItems xmi:id="_OmHEcYNpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - mat_tbl" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_OmHEcoNpEeejnduJsD6mrQ">
       <baseItem xmi:id="_OmHEc4NpEeejnduJsD6mrQ" id="_Ny6jABvFEeeSapef53_EIQ" version="0.1" type="job"/>
@@ -156,11 +154,11 @@
       <relatedItems xmi:id="_OmHrl4NpEeejnduJsD6mrQ" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHrmINpEeejnduJsD6mrQ" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHrmYNpEeejnduJsD6mrQ" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_6hX8MJSqEeekBIvTsBffWg" id="_vnO18CR0Eeea06Gx0iDT9A" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_OmHrmoNpEeejnduJsD6mrQ">
       <baseItem xmi:id="_OmHrm4NpEeejnduJsD6mrQ" id="_vnO18CR0Eeea06Gx0iDT9A" version="0.1" type="job"/>
       <relatedItems xmi:id="_OmHrnINpEeejnduJsD6mrQ" id="_Heun0CR7Eeea06Gx0iDT9A" version="Latest" type="context"/>
-      <relatedItems xmi:id="_OmHrnYNpEeejnduJsD6mrQ" id="_VgPNUBvAEeeSapef53_EIQ" version="Latest" type="property"/>
       <relatedItems xmi:id="_OmHrn4NpEeejnduJsD6mrQ" id="Numeric" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHroINpEeejnduJsD6mrQ" id="TalendString" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHroYNpEeejnduJsD6mrQ" id="DataOperation" version="Latest" type="routine"/>
@@ -170,7 +168,8 @@
       <relatedItems xmi:id="_OmHrpYNpEeejnduJsD6mrQ" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHrpoNpEeejnduJsD6mrQ" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OmHrp4NpEeejnduJsD6mrQ" id="TalendStringUtil" version="Latest" type="routine"/>
-      <relatedItems xmi:id="_OmHrqINpEeejnduJsD6mrQ" id="_eMADkBvAEeeSapef53_EIQ - fac_mat_ldgr_tbl" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_Ttv6gJSqEeekBIvTsBffWg" id="_eMADkBvAEeeSapef53_EIQ - mmat_tbl" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_Ttv6gZSqEeekBIvTsBffWg" id="_eMADkBvAEeeSapef53_EIQ - mat_tbl" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_XkBIkIG-EeeT-qPSauScIg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_XkBIkYG-EeeT-qPSauScIg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
