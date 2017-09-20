@@ -927,13 +927,13 @@
       <column comment="" key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="dose_unit" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="dose_unit" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="form_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="form_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -957,13 +957,13 @@
       <column comment="" key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="dose_unit" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="dose_unit" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="32" name="form_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="form_code" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -1322,79 +1322,79 @@
     <elementParameter field="TEXT" name="LABEL" value="Output Manufactured Materials"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="mmat_tbl" name="tPostgresqlOutput_3">
-      <column key="true" length="2147483647" name="mmat_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="true" length="2147483647" name="mmat_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="mat_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="mat_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="crt_etl_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="crt_etl_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="upd_etl_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="upd_etl_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="crt_utc" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="crt_utc" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="upd_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="upd_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="32" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="13" name="expiry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="13" name="expiry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="64" name="gtin" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="gtin" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="32" name="lot" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="lot" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="48" name="manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="48" name="manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <metadata connector="REJECT" label="mmat_tbl" name="REJECT">
-      <column key="true" length="2147483647" name="mmat_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="true" length="2147483647" name="mmat_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="mat_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="mat_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="crt_etl_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="crt_etl_id" nullable="false" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="2147483647" name="upd_etl_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
+      <column comment="" key="false" length="2147483647" name="upd_etl_id" nullable="true" pattern="" precision="0" sourceType="UUID" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="crt_utc" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="crt_utc" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="upd_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="upd_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="35" name="obslt_utc" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMPTZ" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="32" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="type_mnemonic" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="13" name="expiry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
+      <column comment="" key="false" length="13" name="expiry" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="64" name="gtin" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="gtin" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="32" name="lot" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="64" name="lot" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column key="false" length="48" name="manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+      <column comment="" key="false" length="48" name="manufacturer" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
