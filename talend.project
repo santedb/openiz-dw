@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_XfGMUYG-EeeT-qPSauScIg" label="OpenIZ" description="" language="java" technicalLabel="OPENIZ" local="true" author="_XgVicIG-EeeT-qPSauScIg" productVersion="Talend Open Studio for Data Integration-6.4.1.20170623_1246" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_XfGMUYG-EeeT-qPSauScIg" label="OPENIZ" description="" language="java" technicalLabel="OPENIZ" local="true" author="_XgVicIG-EeeT-qPSauScIg" productVersion="Talend Open Studio for Big Data-6.4.1.20170623_1246" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_X5wIAIG-EeeT-qPSauScIg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_X5wIAYG-EeeT-qPSauScIg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_X5wIAoG-EeeT-qPSauScIg" label="production" code="PROD"/>

@@ -410,7 +410,7 @@
       <column comment="" key="false" length="-1" name="reason" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outputUniqeChildEvents">
         <mapperTableEntries name="enc_id" expression="row1.enc_id_master " type="id_Object"/>
