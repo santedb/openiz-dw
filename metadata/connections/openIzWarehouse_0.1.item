@@ -479,7 +479,7 @@
           <initialValue xsi:type="relational:TdExpression" xmi:id="_ZlQsrRvBEeeSapef53_EIQ" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_ZlQsrhvBEeeSapef53_EIQ" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
         </feature>
-        <feature xsi:type="relational:TdColumn" xmi:id="_ZlQsrxvBEeeSapef53_EIQ" name="fac_id" label="fac_id" length="2147483647" sourceType="UUID" talendType="id_Object" nullable="false">
+        <feature xsi:type="relational:TdColumn" xmi:id="_ZlQsrxvBEeeSapef53_EIQ" name="fac_id" label="fac_id" length="2147483647" sourceType="UUID" talendType="id_Object">
           <taggedValue xmi:id="_ZlQssBvBEeeSapef53_EIQ" tag="Comment" value=""/>
           <initialValue xsi:type="relational:TdExpression" xmi:id="_ZlQssRvBEeeSapef53_EIQ" language="COLUMN_DEF"/>
           <sqlDataType xmi:id="_ZlQsshvBEeeSapef53_EIQ" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>

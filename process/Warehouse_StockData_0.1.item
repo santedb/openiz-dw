@@ -1,32 +1,38 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_staging"/>
+    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5433"/>
     <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_dw"/>
     <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5433"/>
     <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
   </context>
   <context confirmationNeeded="false" name="Production">
     <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_dw"/>
     <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
   </context>
   <context confirmationNeeded="false" name="Testing">
     <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_dw"/>
     <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
   </context>
@@ -139,7 +145,7 @@
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" value="context.dbServer"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.dbPort"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.dbName"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.dbUser"/>
@@ -160,7 +166,7 @@
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
     <elementParameter field="TEXT" name="HOST" value="context.dwServer"/>
     <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="context.dwPort"/>
     <elementParameter field="TEXT" name="DBNAME" value="context.dwName"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.dwUser"/>
@@ -225,7 +231,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlCommit_1"/>
   </node>
-  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="608">
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="608">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_1" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
@@ -242,7 +248,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;with ledger as (&#xD;&#xA;&#x9;select distinct act_tbl.act_id as ref_id, act_utc as sort_time, act_utc as act_date, act_ptcpt_tbl.ent_id as mat_id, act_type.mnemonic as typ_cs, rsn_type.mnemonic as rsn,&#xD;&#xA;&#x9;&#x9;loc_ptcpt.ent_id as loc_id,&#xD;&#xA;&#x9;&#x9;case when loc_ptcpt.rol_cd_id = '727b3624-ea62-46bb-a68b-b9e49e302eca' then -act_ptcpt_tbl.qty else act_ptcpt_tbl.qty end as qty,&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.crt_usr_id as usr_id&#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl inner join act_vrsn_tbl using (act_id)&#xD;&#xA;&#x9;&#x9;inner join act_tbl on (act_tbl.act_id = act_vrsn_tbl.act_id)&#xD;&#xA;&#x9;&#x9;inner join act_ptcpt_tbl as loc_ptcpt on (loc_ptcpt.act_id = act_tbl.act_id and loc_ptcpt.rol_cd_id in ('61848557-d78d-40e5-954f-0b9c97307a04'))&#xD;&#xA;&#x9;&#x9;left join cd_cur_vrsn_vw as act_type on (act_type.cd_id = act_vrsn_tbl.typ_cd_id)&#xD;&#xA;&#x9;&#x9;left join cd_cur_vrsn_vw as rsn_type on (rsn_type.cd_id = act_vrsn_tbl.rsn_cd_id)&#xD;&#xA;&#x9;where&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' and&#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl.rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' and&#xD;&#xA;&#x9;&#x9;act_tbl.mod_cd_id = 'ec74541f-87c4-4327-a4b9-97f325501747' and &#xD;&#xA;&#x9;&#x9;not(coalesce(act_vrsn_tbl.neg_ind, false)) and&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.obslt_utc is null and&#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl.obslt_vrsn_seq_id is null&#xD;&#xA;&#x9;order by &#xD;&#xA;&#x9;&#x9;sort_time desc&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;), balance as (&#xD;&#xA;&#x9;select distinct mmat_cur_vrsn_vw.ent_id as mat_id, ent_rel_tbl.src_ent_id as loc_id, ent_rel_tbl.qty &#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;mmat_cur_vrsn_vw inner join ent_rel_tbl on (mmat_cur_vrsn_vw.ent_id = ent_rel_tbl.trg_ent_id and rel_typ_cd_id = '117da15c-0864-4f00-a987-9b9854cba44e')&#xD;&#xA;&#x9;where obslt_vrsn_seq_id is null&#xD;&#xA;), ledger_deduction as&#xD;&#xA;(&#xD;&#xA;&#x9;select distinct ledger.*, coalesce((select sum(qty) from ledger l where l.act_date > ledger.act_date and l.mat_id = ledger.mat_id and l.loc_id = ledger.loc_id), 0) tot_ded &#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;ledger&#xD;&#xA;&#x9;order by &#xD;&#xA;&#x9;&#x9;sort_time desc&#xD;&#xA;) , running_balance as &#xD;&#xA;(&#xD;&#xA;&#x9;&#x9;select '00000000-0000-0000-0000-000000000000' as ref_id, current_timestamp as sort_time, current_timestamp as act_date, mat_id, 'BALANCE_OH' as typ_cs, null as rsn, loc_id, qty as sol_bal, 0 as qty, qty as eol_bal, 'fadca076-3690-4a6e-af9e-f1cd68e8c7e8' as usr_id&#xD;&#xA;&#x9;&#x9;from&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;balance&#xD;&#xA;&#x9;&#x9;union&#xD;&#xA;&#x9;&#x9;select ref_id, ledger.sort_time, ledger.act_date, ledger.mat_id, ledger.typ_cs, ledger.rsn, ledger.loc_id, balance.qty - ledger.tot_ded - ledger.qty as sol_bal, ledger.qty, balance.qty - ledger.tot_ded as eol_bal, ledger.usr_id&#xD;&#xA;&#x9;&#x9;from &#xD;&#xA;&#x9;&#x9;&#x9;ledger_deduction as ledger inner join balance on (ledger.mat_id = balance.mat_id and ledger.loc_id = balance.loc_id)&#xD;&#xA;) select running_balance.* , usr_name&#xD;&#xA;from &#xD;&#xA;&#x9;running_balance inner join sec_usr_tbl using (usr_id)&#xD;&#xA;where eol_bal is not null&#xD;&#xA;--group by ref_id, loc_id, mat_id&#xD;&#xA;&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;with balance as (&#xD;&#xA;&#x9;select distinct ent_tbl.ent_id as mat_id, ent_rel_tbl.src_ent_id as loc_id, ent_rel_tbl.qty &#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;ent_tbl inner join ent_rel_tbl on (ent_tbl.ent_id = ent_rel_tbl.trg_ent_id and rel_typ_cd_id = '117da15c-0864-4f00-a987-9b9854cba44e' and ent_tbl.cls_cd_id = 'FAFEC286-89D5-420B-9085-054ACA9D1EEF')&#xD;&#xA;&#x9;where obslt_vrsn_seq_id is null&#xD;&#xA;), ledger_deduction as&#xD;&#xA;(&#xD;&#xA;&#x9;select distinct ledger.*, coalesce((select sum(qty) from ledger l where l.act_date > ledger.act_date and l.mat_id = ledger.mat_id and l.loc_id = ledger.loc_id), 0) tot_ded &#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;ledger&#xD;&#xA;&#x9;order by &#xD;&#xA;&#x9;&#x9;sort_time desc&#xD;&#xA;) , running_balance as &#xD;&#xA;(&#xD;&#xA;&#x9;&#x9;select '00000000-0000-0000-0000-000000000000' as ref_id, current_timestamp as sort_time, current_timestamp as act_date, mat_id, 'BALANCE_OH' as typ_cs, null as rsn, loc_id, qty as sol_bal, 0 as qty, qty as eol_bal, 'fadca076-3690-4a6e-af9e-f1cd68e8c7e8' as usr_id&#xD;&#xA;&#x9;&#x9;from&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;balance&#xD;&#xA;&#x9;&#x9;union&#xD;&#xA;&#x9;&#x9;select ref_id, ledger.sort_time, ledger.act_date, ledger.mat_id, ledger.typ_cs, ledger.rsn, ledger.loc_id, balance.qty - ledger.tot_ded - ledger.qty as sol_bal, ledger.qty, balance.qty - ledger.tot_ded as eol_bal, ledger.usr_id&#xD;&#xA;&#x9;&#x9;from &#xD;&#xA;&#x9;&#x9;&#x9;ledger_deduction as ledger inner join balance on (ledger.mat_id = balance.mat_id and ledger.loc_id = balance.loc_id)&#xD;&#xA;) select running_balance.* , usr_name&#xD;&#xA;from &#xD;&#xA;&#x9;running_balance inner join sec_usr_tbl using (usr_id)&#xD;&#xA;where eol_bal is not null&#xD;&#xA;&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1445,11 +1451,83 @@
       <column comment="" key="false" length="35" name="stop_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tPostgresqlConnection_1" target="tPostgresqlConnection_2">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tPostgresqlConnection_1" target="tPostgresqlInput_3">
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;create temporary table if not exists ledger (&#xD;&#xA;&#x9;ref_id uuid,&#xD;&#xA;&#x9;sort_time timestamptz,&#xD;&#xA;&#x9;act_date timestamptz,&#xD;&#xA;&#x9;mat_id uuid,&#xD;&#xA;&#x9;typ_cs varchar(100),&#xD;&#xA;&#x9;rsn varchar(100),&#xD;&#xA;&#x9;loc_id uuid,&#xD;&#xA;&#x9;qty int,&#xD;&#xA;&#x9;usr_id uuid&#xD;&#xA;) on commit preserve rows;&#xD;&#xA;&#xD;&#xA;drop index if exists ledger_act_date;&#xD;&#xA;drop index if exists ledger_mat_id;&#xD;&#xA;create index ledger_act_date on ledger(act_date);&#xD;&#xA;create index ledger_mat_id on ledger(mat_id);&#xD;&#xA;&#xD;&#xA;truncate ledger;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Create Temporary Ledger Table"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlRow_1"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="608">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;insert into ledger&#xD;&#xA;&#x9;select distinct act_vrsn_tbl.act_id as ref_id, act_utc as sort_time, act_utc as act_date, act_ptcpt_tbl.ent_id as mat_id, act_type.mnemonic as typ_cs, rsn_type.mnemonic as rsn,&#xD;&#xA;&#x9;&#x9;loc_ptcpt.ent_id as loc_id,&#xD;&#xA;&#x9;&#x9;case when loc_ptcpt.rol_cd_id = '727b3624-ea62-46bb-a68b-b9e49e302eca' then -act_ptcpt_tbl.qty else act_ptcpt_tbl.qty end as qty,&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.crt_usr_id as usr_id&#xD;&#xA;&#x9;from &#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl inner join act_vrsn_tbl using (act_id)&#xD;&#xA;&#x9;&#x9;--inner join act_tbl on (act_tbl.act_id = act_vrsn_tbl.act_id)&#xD;&#xA;&#x9;&#x9;inner join act_ptcpt_tbl as loc_ptcpt on (loc_ptcpt.act_id = act_vrsn_tbl.act_id and act_vrsn_tbl.obslt_utc is null and loc_ptcpt.rol_cd_id in ('61848557-d78d-40e5-954f-0b9c97307a04'))&#xD;&#xA;&#x9;&#x9;left join cd_cur_vrsn_vw as act_type on (act_type.cd_id = act_vrsn_tbl.typ_cd_id)&#xD;&#xA;&#x9;&#x9;left join cd_cur_vrsn_vw as rsn_type on (rsn_type.cd_id = act_vrsn_tbl.rsn_cd_id)&#xD;&#xA;&#x9;where&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' and&#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl.rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' and&#xD;&#xA;&#x9;&#x9;--act_tbl.mod_cd_id = 'ec74541f-87c4-4327-a4b9-97f325501747' and &#xD;&#xA;&#x9;&#x9;not(coalesce(act_vrsn_tbl.neg_ind, false)) and&#xD;&#xA;&#x9;&#x9;act_vrsn_tbl.obslt_utc is null and&#xD;&#xA;&#x9;&#x9;act_ptcpt_tbl.obslt_vrsn_seq_id is null&#xD;&#xA;&#x9;order by &#xD;&#xA;&#x9;&#x9;sort_time desc;&#xD;&#xA;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
+    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Populate Temporary Table"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tPostgresqlRow_2"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_1" target="tPostgresqlInput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlConnection_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlConnection_2" target="tPostgresqlConnection_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tPostgresqlInput_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1492,12 +1570,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="outputManufacturedMaterials" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlInput_1">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlRow_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row12" lineStyle="8" metaname="tPostgresqlInput_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_6" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_1" target="tPostgresqlRow_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk5" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_2" target="tPostgresqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlConnection_1" show="false"/>
@@ -1531,6 +1615,16 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlInput_5" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
