@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr"/>
+    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_staging3"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
-    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5433"/>
+    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_dw"/>
     <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
-    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5433"/>
+    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
     <contextParameter comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
   </context>
@@ -91,7 +91,7 @@
     <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
     <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
     <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
-    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/justin/Documents/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;C:/Users/fyfej/Programs/TOS_DI-20170623_1246-V6.4.1/workspace/.metadata&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
     <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
@@ -157,7 +157,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH RecordTarget AS (&#xD;&#xA;&#x9;SELECT * FROM act_ptcpt_tbl WHERE rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND obslt_vrsn_seq_id IS NULL&#xD;&#xA;), Author AS (&#xD;&#xA;&#x9;SELECT * FROM act_ptcpt_tbl WHERE rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND obslt_vrsn_seq_id IS NULL&#xD;&#xA;), Product AS (&#xD;&#xA;&#x9;SELECT * FROM act_ptcpt_tbl WHERE rol_cd_id = '99e77288-cb09-4050-a8cf-385513f32f0a' AND obslt_vrsn_seq_id IS NULL&#xD;&#xA;), Consumable AS (&#xD;&#xA;&#x9;SELECT * FROM act_ptcpt_tbl WHERE rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' AND obslt_vrsn_seq_id IS NULL&#xD;&#xA;), Location AS (&#xD;&#xA;&#x9;SELECT * FROM act_ptcpt_tbl WHERE rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND obslt_vrsn_seq_id IS NULL&#xD;&#xA;), Encounter AS (&#xD;&#xA;&#x9;SELECT * FROM act_rel_tbl INNER JOIN act_vrsn_tbl ON (act_rel_tbl.src_act_id = act_vrsn_tbl.act_id and obslt_utc is null) WHERE rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND obslt_vrsn_seq_id IS NULL AND sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;)&#xD;&#xA;SELECT SBADM_CUR_VRSN_VW.*, RecordTarget.ent_id AS RecordTarget_Id, Author.ent_id AS Author_Id, Product.ent_id AS Product_Id, Location.ent_id AS Location_Id, Consumable.ent_id AS Consumable_Id, Encounter.src_act_id AS Encounter_Id FROM SBADM_CUR_VRSN_VW&#xD;&#xA;&#x9;INNER JOIN RecordTarget ON (RecordTarget.act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;LEFT JOIN Author ON (Author.act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;LEFT JOIN Product ON (Product.act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;LEFT JOIN Location ON (Location.act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;LEFT JOIN Consumable ON (Consumable.act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;LEFT JOIN Encounter ON (Encounter.trg_act_id = SBADM_CUR_VRSN_VW.act_id)&#xD;&#xA;&#x9;WHERE SBADM_CUR_VRSN_VW.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;&#xD;&#xA;WITH Encounter AS (&#xD;&#xA;&#x9;SELECT * FROM act_rel_tbl INNER JOIN act_vrsn_tbl ON (act_rel_tbl.src_act_id = act_vrsn_tbl.act_id and obslt_utc is null) WHERE rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND obslt_vrsn_seq_id IS NULL AND sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;)&#xD;&#xA;SELECT sub_adm_tbl.*, act_tbl.*, act_vrsn_tbl.*, sit_cs.mnemonic as site_cs, rte_cs.mnemonic as route_cs, typ_cs.mnemonic as type_cs, RecordTarget.ent_id AS RecordTarget_Id, Author.ent_id AS Author_Id, Product.ent_id AS Product_Id, Location.ent_id AS Location_Id, Consumable.ent_id AS Consumable_Id, Encounter.src_act_id AS Encounter_Id &#xD;&#xA;&#x9;FROM sub_adm_tbl &#xD;&#xA;&#x9;NATURAL INNER JOIN act_vrsn_tbl &#xD;&#xA;&#x9;NATURAL INNER JOIN act_tbl&#xD;&#xA;&#x9;INNER JOIN act_ptcpt_tbl as RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN  act_ptcpt_tbl as Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl as Product ON (Product.act_id = act_tbl.act_id AND Product.rol_cd_id = '99e77288-cb09-4050-a8cf-385513f32f0a' AND Product.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl as Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl as Consumable ON (Consumable.act_id = act_tbl.act_id AND Consumable.rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' AND Consumable.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN Encounter ON (Encounter.trg_act_id = act_tbl.act_id)&#xD;&#xA;&#x9;LEFT JOIN cd_vrsn_tbl AS sit_cs ON (sub_adm_tbl.ste_cd_id = sit_cs.cd_id)&#xD;&#xA;&#x9;LEFT JOIN cd_vrsn_tbl AS rte_cs ON (sub_adm_tbl.rte_cd_id = rte_cs.cd_id)&#xD;&#xA;&#x9;LEFT JOIN cd_vrsn_tbl AS typ_cs ON (act_vrsn_tbl.typ_cd_id = typ_cs.cd_id)&#xD;&#xA;&#x9;WHERE  act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND act_vrsn_tbl.obslt_utc IS NULL&#xD;&#xA;&#xD;&#xA;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -170,9 +170,29 @@
     <elementParameter field="TABLE" name="TRIM_COLUMN">
       <elementValue elementRef="SCHEMA_COLUMN" value="act_vrsn_id"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="vrsn_seq_id"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ste_cd_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="rte_cd_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dos_qty"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dos_unt_cd_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="seq_id"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="act_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tpl_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cls_cd_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mod_cd_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="act_vrsn_id1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="vrsn_seq_id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="act_id1"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="crt_utc"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -200,27 +220,11 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="act_stop_utc"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="mood_cs"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="status_cs"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="reason_cs"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="type_cs"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ste_cd_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="rte_cd_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="dos_unt_cd_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="seq_id"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="site_cs"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="route_cs"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="dose_cs"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="type_cs"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="recordtarget_id"/>
       <elementValue elementRef="TRIM" value="false"/>
@@ -238,39 +242,41 @@
     <elementParameter field="TEXT" name="LABEL" value="Input Substance Administrations"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlInput_1">
-      <column comment="" defaultValue="" key="false" length="2147483647" name="act_vrsn_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="20" name="vrsn_seq_id" nullable="true" pattern="" precision="0" sourceType="FLOAT8" type="id_Double" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="act_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="35" name="crt_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="crt_usr_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="35" name="obslt_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="obslt_usr_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="2147483647" name="obslt_rsn" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="rplc_vrsn_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="1" name="neg_ind" nullable="true" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="typ_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="sts_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="rsn_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="35" name="act_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="35" name="act_start_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="35" name="act_stop_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="mood_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="status_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="reason_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="type_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="act_vrsn_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="2147483647" name="ste_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="rte_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="dos_unt_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="rte_cd_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="0" name="dos_qty" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="dos_unt_cd_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="seq_id" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="site_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="route_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" key="false" length="64" name="dose_cs" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="recordtarget_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="author_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="product_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="location_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="consumable_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2147483647" name="encounter_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="act_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="tpl_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="cls_cd_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="mod_cd_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="act_vrsn_id1" nullable="false" originalDbColumnName="act_vrsn_id" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="20" name="vrsn_seq_id" nullable="false" pattern="" precision="0" sourceType="NUMERIC" type="id_BigDecimal" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="act_id1" nullable="false" originalDbColumnName="act_id" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="crt_utc" nullable="false" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="crt_usr_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="obslt_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="obslt_usr_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="obslt_rsn" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="rplc_vrsn_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="1" name="neg_ind" nullable="false" pattern="" precision="0" sourceType="BOOL" type="id_Boolean" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="typ_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="sts_cd_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="rsn_cd_id" nullable="true" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="act_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="act_start_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="35" name="act_stop_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="64" name="site_cs" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="64" name="route_cs" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="64" name="type_cs" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="recordtarget_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="author_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="product_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="location_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="consumable_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2147483647" name="encounter_id" nullable="false" pattern="" precision="0" sourceType="POINT" type="id_Object" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
@@ -375,39 +381,41 @@
         <mapperTableEntries name="fac_id" expression="row1.location_id " type="id_Object" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="act_vrsn_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="vrsn_seq_id" type="id_Double" nullable="true"/>
-        <mapperTableEntries name="act_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="crt_utc" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="crt_usr_id" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="act_vrsn_id" type="id_Object"/>
+        <mapperTableEntries name="ste_cd_id" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="rte_cd_id" type="id_Object"/>
+        <mapperTableEntries name="dos_qty" type="id_BigDecimal"/>
+        <mapperTableEntries name="dos_unt_cd_id" type="id_Object"/>
+        <mapperTableEntries name="seq_id" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="act_id" type="id_Object"/>
+        <mapperTableEntries name="tpl_id" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="cls_cd_id" type="id_Object"/>
+        <mapperTableEntries name="mod_cd_id" type="id_Object"/>
+        <mapperTableEntries name="act_vrsn_id1" type="id_Object"/>
+        <mapperTableEntries name="vrsn_seq_id" type="id_BigDecimal"/>
+        <mapperTableEntries name="act_id1" type="id_Object"/>
+        <mapperTableEntries name="crt_utc" type="id_Date"/>
+        <mapperTableEntries name="crt_usr_id" type="id_Object"/>
         <mapperTableEntries name="obslt_utc" type="id_Date" nullable="true"/>
         <mapperTableEntries name="obslt_usr_id" type="id_Object" nullable="true"/>
         <mapperTableEntries name="obslt_rsn" type="id_String" nullable="true"/>
         <mapperTableEntries name="rplc_vrsn_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="neg_ind" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="neg_ind" type="id_Boolean"/>
         <mapperTableEntries name="typ_cd_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="sts_cd_id" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="sts_cd_id" type="id_Object"/>
         <mapperTableEntries name="rsn_cd_id" type="id_Object" nullable="true"/>
         <mapperTableEntries name="act_utc" type="id_Date" nullable="true"/>
         <mapperTableEntries name="act_start_utc" type="id_Date" nullable="true"/>
         <mapperTableEntries name="act_stop_utc" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="mood_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="status_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="reason_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="type_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ste_cd_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="rte_cd_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="dos_unt_cd_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="seq_id" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="site_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="route_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="dose_cs" type="id_String" nullable="true"/>
-        <mapperTableEntries name="recordtarget_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="author_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="product_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="location_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="consumable_id" type="id_Object" nullable="true"/>
-        <mapperTableEntries name="encounter_id" type="id_Object" nullable="true"/>
+        <mapperTableEntries name="site_cs" type="id_String"/>
+        <mapperTableEntries name="route_cs" type="id_String"/>
+        <mapperTableEntries name="type_cs" type="id_String"/>
+        <mapperTableEntries name="recordtarget_id" type="id_Object"/>
+        <mapperTableEntries name="author_id" type="id_Object"/>
+        <mapperTableEntries name="product_id" type="id_Object"/>
+        <mapperTableEntries name="location_id" type="id_Object"/>
+        <mapperTableEntries name="consumable_id" type="id_Object"/>
+        <mapperTableEntries name="encounter_id" type="id_Object"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="etl_id" type="id_Object"/>
@@ -1870,7 +1878,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outputTags">
         <mapperTableEntries name="act_id" expression="row9.act_id" type="id_Object"/>
