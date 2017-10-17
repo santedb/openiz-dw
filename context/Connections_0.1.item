@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_RaRAcLA_EeeFd6cOMFffWQ" confirmationNeeded="false" name="Default">
-    <contextParameter xmi:id="_RaRAcbA_EeeFd6cOMFffWQ" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="timr_staging_dw"/>
+    <contextParameter xmi:id="_RaRAcbA_EeeFd6cOMFffWQ" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="openiz_dw"/>
     <contextParameter xmi:id="_RaRAcrA_EeeFd6cOMFffWQ" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_RaRAc7A_EeeFd6cOMFffWQ" comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_RaRAdLA_EeeFd6cOMFffWQ" comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" type="id_String" value="postgres"/>
-    <contextParameter xmi:id="_RaRAdbA_EeeFd6cOMFffWQ" comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="timr_staging"/>
+    <contextParameter xmi:id="_RaRAdbA_EeeFd6cOMFffWQ" comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="openiz"/>
     <contextParameter xmi:id="_RaRAdrA_EeeFd6cOMFffWQ" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_RaRAd7A_EeeFd6cOMFffWQ" comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_RaRAeLA_EeeFd6cOMFffWQ" comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" type="id_String" value="postgres"/>
