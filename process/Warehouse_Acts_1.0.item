@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Testing" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz"/>
+    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timrdb"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
-    <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
-    <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz_dw"/>
+    <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openiz"/>
+    <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="openizdw"/>
     <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
     <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="localhost"/>
@@ -157,7 +157,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM SBADM&quot;;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#xD;&#xA;  act_tbl.act_id, &#xD;&#xA;  FIRST(act_vrsn_tbl.act_utc) as act_utc, &#xD;&#xA;  FIRST(act_vrsn_tbl.neg_ind) as neg_ind, &#xD;&#xA;  FIRST(act_vrsn_tbl.crt_utc) as crt_utc, &#xD;&#xA;  FIRST(act_vrsn_tbl.obslt_utc) as obslt_utc, &#xD;&#xA;  FIRST(sub_adm_tbl.seq_id) as seq_id, &#xD;&#xA;  FIRST(sit_cs.mnemonic) as site_cs, &#xD;&#xA;  FIRST(rte_cs.mnemonic) as route_cs, &#xD;&#xA;  FIRST(typ_cs.mnemonic) as type_cs, &#xD;&#xA;  FIRST(rsn_cs.mnemonic) as reason_cs, &#xD;&#xA;  FIRST(RecordTarget.ent_id) AS RecordTarget_Id, &#xD;&#xA;  FIRST(Author.ent_id) AS Author_Id, &#xD;&#xA;  FIRST(Product.ent_id) AS Product_Id, &#xD;&#xA;  FIRST(Location.ent_id) AS Location_Id,&#xD;&#xA;  FIRST(Consumable.ent_id) AS Consumable_Id, &#xD;&#xA;  FIRST(Encounter.src_act_id) AS Encounter_Id &#xD;&#xA;  FROM &#xD;&#xA;  sub_adm_tbl &#xD;&#xA;  INNER JOIN act_vrsn_tbl ON (sub_adm_tbl.act_vrsn_id = act_vrsn_tbl.act_vrsn_id AND act_vrsn_tbl.obslt_utc IS NULL AND typ_cd_id IN ('0331e13f-f471-4fbd-92dc-66e0a46239d5','6e7a3521-2967-4c0a-80ec-6c5c197b2178','f3be6b88-bc8f-4263-a779-86f21ea10a47'))&#xD;&#xA;  INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '932a3c7e-ad77-450a-8a1f-030fc2855450')&#xD;&#xA;  INNER JOIN act_ptcpt_tbl as RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  INNER JOIN act_ptcpt_tbl as Product ON (Product.act_id = act_tbl.act_id AND Product.rol_cd_id = '99e77288-cb09-4050-a8cf-385513f32f0a' AND Product.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Consumable ON (Consumable.act_id = act_tbl.act_id AND Consumable.rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' AND Consumable.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  INNER JOIN act_rel_tbl Encounter ON (Encounter.trg_act_id = act_tbl.act_id AND Encounter.rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND Encounter.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS sit_cs ON (sub_adm_tbl.ste_cd_id = sit_cs.cd_id and sit_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS rte_cs ON (sub_adm_tbl.rte_cd_id = rte_cs.cd_id and rte_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS typ_cs ON (act_vrsn_tbl.typ_cd_id = typ_cs.cd_id and typ_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS rsn_cs ON (act_vrsn_tbl.rsn_cd_id = rsn_cs.cd_id  and rsn_cs.obslt_utc is null)&#xD;&#xA;  WHERE  &#xD;&#xA;  act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;  AND act_vrsn_tbl.obslt_utc IS NULL&#xD;&#xA;  AND Encounter.src_act_id IN (SELECT act_id FROM act_vrsn_tbl EncounterActVersion INNER JOIN act_tbl EncounterAct USING (act_id) WHERE EncounterActVersion.obslt_utc IS NULL AND EncounterActVersion.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' AND EncounterAct.cls_cd_id IN ('54b52119-1709-4098-8911-5df6d6c84140','fdae49aa-6fcb-40ae-9653-744e87fdd692'))&#xD;&#xA; GROUP BY act_tbl.act_id&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -678,7 +678,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM ENCOUNTER&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT act_tbl.act_id,&#xD;&#xA;&#x9;act_vrsn_tbl.crt_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.obslt_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_start_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_stop_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_utc,&#xD;&#xA;&#x9;RecordTarget.ent_id AS RecordTarget_Id, &#xD;&#xA;&#x9;Author.ent_id AS Author_Id, &#xD;&#xA;&#x9;Location.ent_id AS Location_Id,&#xD;&#xA;&#x9;cd_vrsn_tbl.mnemonic as dsch_mnemonic&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;pat_enc_tbl &#xD;&#xA;&#x9;NATURAL INNER JOIN act_vrsn_tbl&#xD;&#xA;&#x9;INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '54b52119-1709-4098-8911-5df6d6c84140')&#xD;&#xA;&#x9;INNER JOIN act_ptcpt_tbl AS RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN cd_vrsn_tbl ON (pat_enc_tbl.dsch_dsp_cd_id = cd_vrsn_tbl.cd_id and cd_vrsn_tbl.obslt_utc is null)&#xD;&#xA;&#x9;WHERE act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND act_vrsn_tbl.obslt_utc is null &quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -1068,7 +1068,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select * from obs;&#xD;&#xA;&#x9;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT&#xD;&#xA;&#x9;act_tbl.act_id,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.crt_utc) as crt_utc,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.obslt_utc) as obslt_utc,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.act_utc) as act_utc,&#xD;&#xA;&#x9;FIRST(typ_cd.mnemonic) as type_cs,&#xD;&#xA;&#x9;FIRST(qty_obs_tbl.qty) as qty, &#xD;&#xA;&#x9;FIRST(uom_cd.mnemonic) as uom,&#xD;&#xA;&#x9;FIRST(int_cd.mnemonic) as intr,&#xD;&#xA;&#x9;FIRST(recordtarget.ent_id) as recordtarget_id,&#xD;&#xA;&#x9;FIRST(author.ent_id) as author_id,&#xD;&#xA;&#x9;FIRST(location.ent_id) as location_id,&#xD;&#xA;&#x9;FIRST(encounter.src_act_id) as enc_id&#xD;&#xA;FROM &#xD;&#xA;&#x9;qty_obs_tbl &#xD;&#xA;&#x9;INNER JOIN obs_tbl USING (act_vrsn_id)&#xD;&#xA;&#x9;INNER JOIN act_vrsn_tbl USING (act_vrsn_id)&#xD;&#xA;&#x9;INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '28d022c6-8a8b-47c4-9e6a-2bc67308739e')&#xD;&#xA;&#x9;INNER JOIN act_ptcpt_tbl AS RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;INNER JOIN act_rel_tbl Encounter ON (Encounter.trg_act_id = act_tbl.act_id AND Encounter.rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND Encounter.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl typ_cd ON (typ_cd_id = typ_cd.cd_id AND typ_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl uom_cd ON (uom_cd_id = uom_cd.cd_id AND uom_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl int_cd ON (int_cd_id = int_cd.cd_id AND int_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;WHERE act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND typ_cd_id = 'a261f8cd-69b0-49aa-91f4-e6d3e5c612ed'&#xD;&#xA;&#x9;AND act_vrsn_tbl.obslt_utc IS NULL&#xD;&#xA;&#x9;AND Encounter.src_act_id IN (SELECT act_id FROM act_vrsn_tbl EncounterActVersion INNER JOIN act_tbl EncounterAct USING (act_id) WHERE EncounterActVersion.obslt_utc IS NULL AND EncounterActVersion.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' AND EncounterAct.cls_cd_id IN ('54b52119-1709-4098-8911-5df6d6c84140','fdae49aa-6fcb-40ae-9653-744e87fdd692'))&#xD;&#xA;GROUP BY act_tbl.act_id&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -2201,150 +2201,6 @@
       <column comment="" key="false" length="35" name="stop_utc" nullable="true" pattern="" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="-32">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;CREATE TEMPORARY TABLE IF NOT EXISTS ENCOUNTER  (&#xD;&#xA;&#x9;ACT_ID UUID,&#xD;&#xA;&#x9;CRT_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;OBSLT_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;ACT_START_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;ACT_STOP_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;ACT_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;RECORDTARGET_ID UUID,&#xD;&#xA;&#x9;AUTHOR_ID UUID,&#xD;&#xA;&#x9;LOCATION_ID UUID,&#xD;&#xA;&#x9;DSCH_MNEMONIC VARCHAR(64)&#xD;&#xA;);&#xD;&#xA;TRUNCATE ENCOUNTER;&#xD;&#xA;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Create Encounter TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_1"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="64">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_2" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO ENCOUNTER &#xD;&#xA;SELECT act_tbl.act_id,&#xD;&#xA;&#x9;act_vrsn_tbl.crt_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.obslt_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_start_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_stop_utc,&#xD;&#xA;&#x9;act_vrsn_tbl.act_utc,&#xD;&#xA;&#x9;RecordTarget.ent_id AS RecordTarget_Id, &#xD;&#xA;&#x9;Author.ent_id AS Author_Id, &#xD;&#xA;&#x9;Location.ent_id AS Location_Id,&#xD;&#xA;&#x9;cd_vrsn_tbl.mnemonic as dsch_mnemonic&#xD;&#xA;&#x9;FROM &#xD;&#xA;&#x9;pat_enc_tbl &#xD;&#xA;&#x9;NATURAL INNER JOIN act_vrsn_tbl&#xD;&#xA;&#x9;INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '54b52119-1709-4098-8911-5df6d6c84140')&#xD;&#xA;&#x9;INNER JOIN act_ptcpt_tbl AS RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN cd_vrsn_tbl ON (pat_enc_tbl.dsch_dsp_cd_id = cd_vrsn_tbl.cd_id and cd_vrsn_tbl.obslt_utc is null)&#xD;&#xA;&#x9;WHERE act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND act_vrsn_tbl.obslt_utc is null ;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Insert Encounter TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_2"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="352">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_3" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;CREATE TEMPORARY TABLE IF NOT EXISTS SBADM &#xD;&#xA;(&#xD;&#xA;&#x9;ACT_ID UUID,&#xD;&#xA;&#xD;&#xA;&#x9;ACT_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;NEG_IND BOOLEAN,&#xD;&#xA;&#x9;CRT_UTC TIMESTAMPTZ, &#xD;&#xA;&#x9;OBSLT_UTC TIMESTAMPTZ,&#xD;&#xA;&#x9;SEQ_ID INT,&#xD;&#xA;&#x9;SITE_CS VARCHAR(64),&#xD;&#xA;&#x9;ROUTE_CS VARCHAR(64),&#xD;&#xA;&#x9;TYPE_CS VARCHAR(64),&#xD;&#xA;&#x9;REASON_CS VARCHAR(64),&#xD;&#xA;&#x9;RECORDTARGET_ID UUID,&#xD;&#xA;&#x9;AUTHOR_ID UUID,&#xD;&#xA;&#x9;PRODUCT_ID UUID,&#xD;&#xA;&#x9;LOCATION_ID UUID,&#xD;&#xA;&#x9;CONSUMABLE_ID UUID,&#xD;&#xA;&#x9;ENCOUNTER_ID UUID&#xD;&#xA;);&#xD;&#xA;truncate sbadm;&#xD;&#xA;&#xD;&#xA;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Create SBADM TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_3"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="448">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_4" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO SBADM SELECT &#xD;&#xA;  act_tbl.act_id, &#xD;&#xA;  FIRST(act_vrsn_tbl.act_utc) as act_utc, &#xD;&#xA;  FIRST(act_vrsn_tbl.neg_ind) as neg_ind, &#xD;&#xA;  FIRST(act_vrsn_tbl.crt_utc) as crt_utc, &#xD;&#xA;  FIRST(act_vrsn_tbl.obslt_utc) as obslt_utc, &#xD;&#xA;  FIRST(sub_adm_tbl.seq_id) as seq_id, &#xD;&#xA;  FIRST(sit_cs.mnemonic) as site_cs, &#xD;&#xA;  FIRST(rte_cs.mnemonic) as route_cs, &#xD;&#xA;  FIRST(typ_cs.mnemonic) as type_cs, &#xD;&#xA;  FIRST(rsn_cs.mnemonic) as reason_cs, &#xD;&#xA;  FIRST(RecordTarget.ent_id) AS RecordTarget_Id, &#xD;&#xA;  FIRST(Author.ent_id) AS Author_Id, &#xD;&#xA;  FIRST(Product.ent_id) AS Product_Id, &#xD;&#xA;  FIRST(Location.ent_id) AS Location_Id,&#xD;&#xA;  FIRST(Consumable.ent_id) AS Consumable_Id, &#xD;&#xA;  FIRST(Encounter.src_act_id) AS Encounter_Id &#xD;&#xA;  FROM &#xD;&#xA;  sub_adm_tbl &#xD;&#xA;  INNER JOIN act_vrsn_tbl ON (sub_adm_tbl.act_vrsn_id = act_vrsn_tbl.act_vrsn_id AND act_vrsn_tbl.obslt_utc IS NULL AND typ_cd_id IN ('0331e13f-f471-4fbd-92dc-66e0a46239d5','6e7a3521-2967-4c0a-80ec-6c5c197b2178','f3be6b88-bc8f-4263-a779-86f21ea10a47'))&#xD;&#xA;  INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '932a3c7e-ad77-450a-8a1f-030fc2855450')&#xD;&#xA;  INNER JOIN act_ptcpt_tbl as RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  INNER JOIN act_ptcpt_tbl as Product ON (Product.act_id = act_tbl.act_id AND Product.rol_cd_id = '99e77288-cb09-4050-a8cf-385513f32f0a' AND Product.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN act_ptcpt_tbl as Consumable ON (Consumable.act_id = act_tbl.act_id AND Consumable.rol_cd_id = 'a5cac7f7-e3b7-4dd8-872c-db0e7fcc2d84' AND Consumable.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  INNER JOIN act_rel_tbl Encounter ON (Encounter.trg_act_id = act_tbl.act_id AND Encounter.rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND Encounter.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS sit_cs ON (sub_adm_tbl.ste_cd_id = sit_cs.cd_id and sit_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS rte_cs ON (sub_adm_tbl.rte_cd_id = rte_cs.cd_id and rte_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS typ_cs ON (act_vrsn_tbl.typ_cd_id = typ_cs.cd_id and typ_cs.obslt_utc is null)&#xD;&#xA;  LEFT JOIN cd_vrsn_tbl AS rsn_cs ON (act_vrsn_tbl.rsn_cd_id = rsn_cs.cd_id  and rsn_cs.obslt_utc is null)&#xD;&#xA;  WHERE  &#xD;&#xA;  act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;  AND act_vrsn_tbl.obslt_utc IS NULL&#xD;&#xA;  AND Encounter.src_act_id IN (SELECT act_id FROM act_vrsn_tbl EncounterActVersion INNER JOIN act_tbl EncounterAct USING (act_id) WHERE EncounterActVersion.obslt_utc IS NULL AND EncounterActVersion.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' AND EncounterAct.cls_cd_id IN ('54b52119-1709-4098-8911-5df6d6c84140','fdae49aa-6fcb-40ae-9653-744e87fdd692'))&#xD;&#xA; GROUP BY act_tbl.act_id&#xD;&#xA;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Populate SBADM TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_4"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
   <node componentName="tPostgresqlRollback" componentVersion="0.102" offsetLabelX="-1" offsetLabelY="0" posX="960" posY="256">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRollback_1" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
@@ -2394,78 +2250,6 @@
     <elementParameter field="TEXT" name="LABEL" value="Truncate Warehouse Tables"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tPostgresqlRow_6"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="160">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_5" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;CREATE TEMPORARY TABLE IF NOT EXISTS OBS (&#xD;&#xA;act_id UUID,&#xD;&#xA;crt_utc TIMESTAMPTZ,&#xD;&#xA;obslt_utc TIMESTAMPTZ,&#xD;&#xA;act_utc TIMESTAMPTZ,&#xD;&#xA;type_cs VARCHAR(64),&#xD;&#xA;qty NUMERIC(20,10),&#xD;&#xA;uom VARCHAR(64),&#xD;&#xA;intr VARCHAR(64),&#xD;&#xA;recordtarget_id UUID,&#xD;&#xA;author_id UUID,&#xD;&#xA;location_id UUID,&#xD;&#xA;encounter_id UUID&#xD;&#xA;);&#xD;&#xA;&#xD;&#xA;TRUNCATE OBS;&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Create OBS TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_5"/>
-    <metadata connector="REJECT" name="REJECT">
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
-    </metadata>
-  </node>
-  <node componentName="tPostgresqlRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="256">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_8" show="false"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_1"/>
-    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="PRIOR_TO_V9" show="false"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="PORT" value="&quot;5432&quot;" show="false"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="TYPE" value="PostgreSQL" show="false"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="PASS" value="0RMsyjmybrE=" show="false"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;INSERT INTO OBS &#xD;&#xA;SELECT DISTINCT&#xD;&#xA;&#x9;act_tbl.act_id,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.crt_utc) as crt_utc,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.obslt_utc) as obslt_utc,&#xD;&#xA;&#x9;MAX(act_vrsn_tbl.act_utc) as act_utc,&#xD;&#xA;&#x9;FIRST(typ_cd.mnemonic) as type_cs,&#xD;&#xA;&#x9;FIRST(qty_obs_tbl.qty) as qty, &#xD;&#xA;&#x9;FIRST(uom_cd.mnemonic) as uom,&#xD;&#xA;&#x9;FIRST(int_cd.mnemonic) as intr,&#xD;&#xA;&#x9;FIRST(recordtarget.ent_id) as recordtarget_id,&#xD;&#xA;&#x9;FIRST(author.ent_id) as author_id,&#xD;&#xA;&#x9;FIRST(location.ent_id) as location_id,&#xD;&#xA;&#x9;FIRST(encounter.src_act_id) as enc_id&#xD;&#xA;FROM &#xD;&#xA;&#x9;qty_obs_tbl &#xD;&#xA;&#x9;INNER JOIN obs_tbl USING (act_vrsn_id)&#xD;&#xA;&#x9;INNER JOIN act_vrsn_tbl USING (act_vrsn_id)&#xD;&#xA;&#x9;INNER JOIN act_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND act_tbl.cls_cd_id = '28d022c6-8a8b-47c4-9e6a-2bc67308739e')&#xD;&#xA;&#x9;INNER JOIN act_ptcpt_tbl AS RecordTarget ON (RecordTarget.act_id = act_tbl.act_id AND RecordTarget.rol_cd_id = '3f92dbee-a65e-434f-98ce-841feeb02e3f' AND RecordTarget.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Author ON (Author.act_id = act_tbl.act_id AND Author.rol_cd_id = 'f0cb3faf-435d-4704-9217-b884f757bc14' AND Author.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;LEFT JOIN act_ptcpt_tbl AS Location ON (Location.act_id = act_tbl.act_id AND Location.rol_cd_id = '61848557-d78d-40e5-954f-0b9c97307a04' AND Location.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;INNER JOIN act_rel_tbl Encounter ON (Encounter.trg_act_id = act_tbl.act_id AND Encounter.rel_typ_cd_id = '78b9540f-438b-4b6f-8d83-aaf4979dbc64' AND Encounter.obslt_vrsn_seq_id IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl typ_cd ON (typ_cd_id = typ_cd.cd_id AND typ_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl uom_cd ON (uom_cd_id = uom_cd.cd_id AND uom_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;INNER JOIN cd_vrsn_tbl int_cd ON (int_cd_id = int_cd.cd_id AND int_cd.obslt_utc IS NULL)&#xD;&#xA;&#x9;WHERE act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND typ_cd_id = 'a261f8cd-69b0-49aa-91f4-e6d3e5c612ed'&#xD;&#xA;&#x9;AND act_vrsn_tbl.obslt_utc IS NULL&#xD;&#xA;&#x9;AND Encounter.src_act_id IN (SELECT act_id FROM act_vrsn_tbl EncounterActVersion INNER JOIN act_tbl EncounterAct USING (act_id) WHERE EncounterActVersion.obslt_utc IS NULL AND EncounterActVersion.sts_cd_id = 'afc33800-8225-4061-b168-bacc09cdbae3' AND EncounterAct.cls_cd_id IN ('54b52119-1709-4098-8911-5df6d6c84140','fdae49aa-6fcb-40ae-9653-744e87fdd692'))&#xD;&#xA;GROUP BY act_tbl.act_id&quot;"/>
-    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
-    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
-    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="CHECK" name="PROPAGATE_RECORD_SET" value="false"/>
-    <elementParameter field="COLUMN_LIST" name="RECORD_SET_COLUMN" value="" show="false"/>
-    <elementParameter field="CHECK" name="USE_PREPAREDSTATEMENT" value="false"/>
-    <elementParameter field="TABLE" name="SET_PREPAREDSTATEMENT_PARAMETERS" show="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
-    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="Populate OBS TMP Table"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tPostgresqlRow_8"/>
     <metadata connector="REJECT" name="REJECT">
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
@@ -2620,8 +2404,11 @@
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tPostgresqlOutput_2" offsetLabelX="-4" offsetLabelY="-36" source="tPostgresqlOutput_2" target="tPostgresqlRollback_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError1" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_2" target="tPostgresqlRow_5">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_2" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tPostgresqlOutput_2" target="tWarn_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tPostgresqlOutput_2" target="tPostgresqlInput_5">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tPostgresqlInput_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_5" target="tMap_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2638,8 +2425,11 @@
   <connection connectorName="COMPONENT_ERROR" label="OnComponentError" lineStyle="5" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlRollback_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentError3" show="false"/>
   </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlOutput_3" target="tPostgresqlRow_3">
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tPostgresqlOutput_3" target="tWarn_4">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlOutput_3" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tPostgresqlOutput_3" target="tPostgresqlInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tPostgresqlInput_14" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlInput_14" target="tMap_7">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2676,41 +2466,14 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row13" lineStyle="0" metaname="tPostgresqlRow_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_1" target="tPostgresqlRow_2">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row13" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_2" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_2" target="tPostgresqlInput_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk10" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row14" lineStyle="0" metaname="tPostgresqlRow_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_3" target="tPostgresqlRow_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_3" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_3" target="tWarn_4">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk15" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_4" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_4" target="tPostgresqlInput_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk11" show="false"/>
-  </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRollback_1" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRollback_1" target="tDie_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_6" target="tWarn_1">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk13" show="false"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_6" target="tPostgresqlRow_1">
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tPostgresqlRow_6" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_6" target="tPostgresqlInput_3">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
-  </connection>
-  <connection connectorName="FLOW" label="row12" lineStyle="0" metaname="tPostgresqlRow_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_5" target="tPostgresqlRow_8">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row12" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_5" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_5" target="tWarn_3">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk14" show="false"/>
-  </connection>
-  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostgresqlRow_8" offsetLabelX="0" offsetLabelY="0" source="tPostgresqlRow_8" target="tPostgresqlInput_5">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk8" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tLogCatcher_1" offsetLabelX="0" offsetLabelY="0" source="tLogCatcher_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -2760,16 +2523,6 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_1" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_3" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRollback_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
@@ -2781,11 +2534,6 @@
   </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_6" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostgresqlRow_5" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
