@@ -100,6 +100,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "_eMADkBvAEeeSapef53_EIQ - act_ext_tbl",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
     "id" : "_eMADkBvAEeeSapef53_EIQ - aefi_tbl",
     "version" : "Latest",
     "type" : "schema"

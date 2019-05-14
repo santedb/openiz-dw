@@ -2,15 +2,15 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_qHSS8G_6EemhNcba6MbMEw" confirmationNeeded="false" name="Default">
     <contextParameter xmi:id="_qHSS8W_6EemhNcba6MbMEw" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="timrdw"/>
-    <contextParameter xmi:id="_qHSS8m_6EemhNcba6MbMEw" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="192.168.100.83"/>
+    <contextParameter xmi:id="_qHSS8m_6EemhNcba6MbMEw" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_qHSS82_6EemhNcba6MbMEw" comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSS9G_6EemhNcba6MbMEw" comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSS9W_6EemhNcba6MbMEw" comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="timrdb"/>
-    <contextParameter xmi:id="_qHSS9m_6EemhNcba6MbMEw" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="192.168.100.83"/>
+    <contextParameter xmi:id="_qHSS9m_6EemhNcba6MbMEw" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_qHSS92_6EemhNcba6MbMEw" comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSS-G_6EemhNcba6MbMEw" comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" type="id_String" value="postgres"/>
-    <contextParameter xmi:id="_qHSS-W_6EemhNcba6MbMEw" comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5432"/>
-    <contextParameter xmi:id="_qHSS-m_6EemhNcba6MbMEw" comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_qHSS-W_6EemhNcba6MbMEw" comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5433"/>
+    <contextParameter xmi:id="_qHSS-m_6EemhNcba6MbMEw" comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" type="id_String" value="5433"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_qHSS-2_6EemhNcba6MbMEw" confirmationNeeded="false" name="Production">
     <contextParameter xmi:id="_qHSS_G_6EemhNcba6MbMEw" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="openiz_dw"/>
@@ -26,14 +26,14 @@
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_qHSTBm_6EemhNcba6MbMEw" confirmationNeeded="false" name="Testing">
     <contextParameter xmi:id="_qHSTB2_6EemhNcba6MbMEw" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="timrdw"/>
-    <contextParameter xmi:id="_qHSTCG_6EemhNcba6MbMEw" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="192.168.100.83"/>
+    <contextParameter xmi:id="_qHSTCG_6EemhNcba6MbMEw" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_qHSTCW_6EemhNcba6MbMEw" comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSTCm_6EemhNcba6MbMEw" comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSTC2_6EemhNcba6MbMEw" comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="timrdb"/>
-    <contextParameter xmi:id="_qHSTDG_6EemhNcba6MbMEw" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="192.168.100.83"/>
+    <contextParameter xmi:id="_qHSTDG_6EemhNcba6MbMEw" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="localhost"/>
     <contextParameter xmi:id="_qHSTDW_6EemhNcba6MbMEw" comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter xmi:id="_qHSTDm_6EemhNcba6MbMEw" comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" type="id_String" value="postgres"/>
-    <contextParameter xmi:id="_qHSTD2_6EemhNcba6MbMEw" comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5432"/>
-    <contextParameter xmi:id="_qHSTEG_6EemhNcba6MbMEw" comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_qHSTD2_6EemhNcba6MbMEw" comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5433"/>
+    <contextParameter xmi:id="_qHSTEG_6EemhNcba6MbMEw" comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" type="id_String" value="5433"/>
   </talendfile:ContextType>
 </xmi:XMI>
