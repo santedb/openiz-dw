@@ -1568,6 +1568,33 @@
           <sqlDataType xmi:id="_LAjiwb1OEeqK3oMvdFfWXQ" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
         </feature>
       </ownedElement>
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_yHT_4NgiEeqewvscjQ0AMg" name="msg_queue_log_tbl" id="_yHK18NgiEeqewvscjQ0AMg" label="msg_queue_log_tbl" tableType="TABLE">
+        <feature xsi:type="relational:TdColumn" xmi:id="_yHT_4dgiEeqewvscjQ0AMg" name="log_id" label="log_id" length="2147483647" sourceType="UUID" talendType="id_Object" key="true" nullable="false">
+          <taggedValue xmi:id="_yHT_4tgiEeqewvscjQ0AMg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_yHT_49giEeqewvscjQ0AMg" body="'uuid_generate_v1()'" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_yHT_5NgiEeqewvscjQ0AMg" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_yHT_5dgiEeqewvscjQ0AMg" name="msg_id" label="msg_id" length="2147483647" sourceType="UUID" talendType="id_Object" nullable="false">
+          <taggedValue xmi:id="_yHT_5tgiEeqewvscjQ0AMg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_yHT_59giEeqewvscjQ0AMg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_yHT_6NgiEeqewvscjQ0AMg" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_yHT_6dgiEeqewvscjQ0AMg" name="pat_id" label="pat_id" length="2147483647" sourceType="UUID" talendType="id_Object" nullable="false">
+          <taggedValue xmi:id="_yHT_6tgiEeqewvscjQ0AMg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_yHT_69giEeqewvscjQ0AMg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_yHT_7NgiEeqewvscjQ0AMg" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_yHT_7dgiEeqewvscjQ0AMg" name="ref_id" label="ref_id" length="2147483647" sourceType="UUID" talendType="id_Object" nullable="false">
+          <taggedValue xmi:id="_yHT_7tgiEeqewvscjQ0AMg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_yHT_79giEeqewvscjQ0AMg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_yHT_8NgiEeqewvscjQ0AMg" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_yHT_8dgiEeqewvscjQ0AMg" name="proc_name" label="proc_name" length="32" sourceType="VARCHAR" talendType="id_String" nullable="false">
+          <taggedValue xmi:id="_yHT_8tgiEeqewvscjQ0AMg" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_yHT_89giEeqewvscjQ0AMg" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_yHT_9NgiEeqewvscjQ0AMg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+        </feature>
+      </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="_kSzpwBvAEeeSapef53_EIQ" name="openiz_dw" dataManager="_kRyWEBvAEeeSapef53_EIQ">

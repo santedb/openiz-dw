@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Testing" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="The server that holds audits" name="auditServer" prompt="auditServer?" promptNeeded="false" type="id_String" value="localhost"/>
-    <contextParameter comment="The database on the service" name="auditCatalog" prompt="auditCatalog?" promptNeeded="false" type="id_String" value="auditdb"/>
-    <contextParameter comment="The password on audit database" name="auditPassword" prompt="auditPassword?" promptNeeded="false" type="id_String" value="Mohawk123"/>
-    <contextParameter comment="The username on the audit db" name="auditUser" prompt="auditUser?" promptNeeded="false" type="id_String" value="sa"/>
+    <contextParameter comment="The server that holds audits" name="auditServer" prompt="auditServer?" promptNeeded="false" type="id_String" value="fs-dev-psql10"/>
+    <contextParameter comment="The database on the service" name="auditCatalog" prompt="auditCatalog?" promptNeeded="false" type="id_String" value="timr_audit"/>
+    <contextParameter comment="The password on audit database" name="auditPassword" prompt="auditPassword?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter comment="The username on the audit db" name="auditUser" prompt="auditUser?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_demo_db"/>
     <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
     <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
@@ -37,7 +37,7 @@
     <contextParameter comment="The name of the staged database to use" name="dwWorking" prompt="dwWorking?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_dw_work"/>
   </context>
   <context confirmationNeeded="false" name="Testing">
-    <contextParameter comment="The server that holds audits" name="auditServer" prompt="auditServer?" promptNeeded="false" type="id_String" value="192.168.100.83"/>
+    <contextParameter comment="The server that holds audits" name="auditServer" prompt="auditServer?" promptNeeded="false" type="id_String" value="fs-dev-psql10"/>
     <contextParameter comment="The database on the service" name="auditCatalog" prompt="auditCatalog?" promptNeeded="false" type="id_String" value="timr_audit"/>
     <contextParameter comment="The password on audit database" name="auditPassword" prompt="auditPassword?" promptNeeded="false" type="id_String" value="postgres"/>
     <contextParameter comment="The username on the audit db" name="auditUser" prompt="auditUser?" promptNeeded="false" type="id_String" value="postgres"/>
@@ -1414,7 +1414,7 @@
   </node>
   <node componentName="tPostgresqlRollback" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="1152" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBRollback_1" show="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tPostgresqlConnection_2"/>
     <elementParameter field="CHECK" name="CLOSE" value="true"/>
     <elementParameter field="TEXT" name="LABEL" value="Rollback Changes"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>

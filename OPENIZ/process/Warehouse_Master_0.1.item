@@ -55,7 +55,7 @@
     <contextParameter comment="User" name="auditUser" prompt="auditUser?" promptNeeded="false" type="id_String" value="postgres"/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -156,7 +156,7 @@
     <routinesParameter id="_vfgFIBuTEeeSapef53_EIQ" name="TalendString"/>
     <routinesParameter id="_YFOYMIG-EeeT-qPSauScIg" name="TalendStringUtil"/>
   </parameters>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_6" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -176,7 +176,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_6"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="224" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Pre-Requisites&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -185,7 +185,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_1"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_1" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -205,7 +205,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_1"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="18" offsetLabelY="0" posX="416" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="18" offsetLabelY="0" posX="416" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_2" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Patients&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -214,7 +214,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_2"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="544" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_2" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -234,7 +234,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_2"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="18" offsetLabelY="0" posX="640" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="18" offsetLabelY="0" posX="640" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_3" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Users&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -243,7 +243,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_3"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -263,7 +263,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_5"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="832" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="832" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_4" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Materials&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -272,7 +272,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_4"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="928" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -292,7 +292,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_4"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="992" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="992" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_5" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Acts&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -301,7 +301,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_5"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1088" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_3" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
@@ -321,7 +321,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tRunJob_3"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="1152" posY="160">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="4" offsetLabelY="1" posX="1152" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_6" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Starting Finalization&quot;"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -330,7 +330,7 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tWarn_6"/>
   </node>
-  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="160">
+  <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="1280" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_7" show="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
