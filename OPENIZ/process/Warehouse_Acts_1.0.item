@@ -3437,7 +3437,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT src_act_id, trg_act_id&#xD;&#xA;FROM act_rel_tbl &#xD;&#xA;INNER JOIN act_tbl ON (act_id = src_act_id AND act_tbl.cls_cd_id = 'b0323489-9a09-411a-bb55-ff283830ea1a')&#xD;&#xA;INNER JOIN act_vrsn_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND obslt_utc IS NULL)&#xD;&#xA;WHERE &#xD;&#xA;&#x9;obslt_vrsn_seq_id IS NULL&#xD;&#xA;&#x9;AND act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND rel_typ_cd_id = '78B9540F-438B-4B6F-8D83-AAF4979DBC64';&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT DISTINCT src_act_id, trg_act_id&#xD;&#xA;FROM act_rel_tbl &#xD;&#xA;INNER JOIN act_tbl ON (act_id = src_act_id AND act_tbl.cls_cd_id = 'b0323489-9a09-411a-bb55-ff283830ea1a')&#xD;&#xA;INNER JOIN act_vrsn_tbl ON (act_tbl.act_id = act_vrsn_tbl.act_id AND obslt_utc IS NULL)&#xD;&#xA;WHERE &#xD;&#xA;&#x9;act_vrsn_tbl.STS_CD_ID = 'afc33800-8225-4061-b168-bacc09cdbae3'&#xD;&#xA;&#x9;AND rel_typ_cd_id = '78B9540F-438B-4B6F-8D83-AAF4979DBC64';&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime" show="false"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false" show="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
