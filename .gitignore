@@ -1,0 +1,5 @@
+*/target/*
+**/target/*
+*.bat
+*.ps1
+*.sh

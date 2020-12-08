@@ -1605,6 +1605,28 @@
           <sqlDataType xmi:id="_yHT_9NgiEeqewvscjQ0AMg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
         </feature>
       </ownedElement>
+      <ownedElement xsi:type="relational:TdTable" xmi:id="_goonkB30Eeug39Rkt00pIQ" name="act_list_mat_tbl" id="_gomyYB30Eeug39Rkt00pIQ" label="act_list_mat_tbl" tableType="TABLE">
+        <feature xsi:type="relational:TdColumn" xmi:id="_goonkR30Eeug39Rkt00pIQ" name="act_id" label="act_id" length="2147483647" sourceType="UUID" talendType="id_Object" key="true" nullable="false">
+          <taggedValue xmi:id="_goonkh30Eeug39Rkt00pIQ" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_goonkx30Eeug39Rkt00pIQ" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_goonlB30Eeug39Rkt00pIQ" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_goonlR30Eeug39Rkt00pIQ" name="mmat_id" label="mmat_id" length="2147483647" sourceType="UUID" talendType="id_Object" key="true" nullable="false">
+          <taggedValue xmi:id="_goonlh30Eeug39Rkt00pIQ" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_goonlx30Eeug39Rkt00pIQ" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_goonmB30Eeug39Rkt00pIQ" name="UUID" numericPrecisionRadix="10" javaDataType="1111"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_goonmR30Eeug39Rkt00pIQ" name="qty" label="qty" length="10" sourceType="INT4" talendType="id_Integer" nullable="false">
+          <taggedValue xmi:id="_goonmh30Eeug39Rkt00pIQ" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_goonmx30Eeug39Rkt00pIQ" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_goonnB30Eeug39Rkt00pIQ" name="INT4" numericPrecisionRadix="10" javaDataType="4"/>
+        </feature>
+        <feature xsi:type="relational:TdColumn" xmi:id="_goonnR30Eeug39Rkt00pIQ" name="vvm_cs" label="vvm_cs" length="32" sourceType="VARCHAR" talendType="id_String">
+          <taggedValue xmi:id="_goonnh30Eeug39Rkt00pIQ" tag="Comment" value=""/>
+          <initialValue xsi:type="relational:TdExpression" xmi:id="_goonnx30Eeug39Rkt00pIQ" language="COLUMN_DEF"/>
+          <sqlDataType xmi:id="_goonoB30Eeug39Rkt00pIQ" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
+        </feature>
+      </ownedElement>
     </ownedElement>
   </orgomg.cwm.resource.relational:Catalog>
   <orgomg.cwm.resource.relational:Catalog xmi:id="_kSzpwBvAEeeSapef53_EIQ" name="openiz_dw" dataManager="_kRyWEBvAEeeSapef53_EIQ">
