@@ -121,21 +121,33 @@ protected static void logIgnoredError(String message, Throwable cause) {
 
 		public void synchronizeContext(){
 			
+			if(dwName != null){
+				
+					this.setProperty("dwName", dwName.toString());
+				
+			}
+			
+			if(dwServer != null){
+				
+					this.setProperty("dwServer", dwServer.toString());
+				
+			}
+			
+			if(dwUser != null){
+				
+					this.setProperty("dwUser", dwUser.toString());
+				
+			}
+			
+			if(dwPassword != null){
+				
+					this.setProperty("dwPassword", dwPassword.toString());
+				
+			}
+			
 			if(dbName != null){
 				
 					this.setProperty("dbName", dbName.toString());
-				
-			}
-			
-			if(dbPassword != null){
-				
-					this.setProperty("dbPassword", dbPassword.toString());
-				
-			}
-			
-			if(dbPort != null){
-				
-					this.setProperty("dbPort", dbPort.toString());
 				
 			}
 			
@@ -151,33 +163,21 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(dwName != null){
+			if(dbPassword != null){
 				
-					this.setProperty("dwName", dwName.toString());
+					this.setProperty("dbPassword", dbPassword.toString());
 				
 			}
 			
-			if(dwPassword != null){
+			if(dbPort != null){
 				
-					this.setProperty("dwPassword", dwPassword.toString());
+					this.setProperty("dbPort", dbPort.toString());
 				
 			}
 			
 			if(dwPort != null){
 				
 					this.setProperty("dwPort", dwPort.toString());
-				
-			}
-			
-			if(dwServer != null){
-				
-					this.setProperty("dwServer", dwServer.toString());
-				
-			}
-			
-			if(dwUser != null){
-				
-					this.setProperty("dwUser", dwUser.toString());
 				
 			}
 			
@@ -195,17 +195,25 @@ protected static void logIgnoredError(String message, Throwable cause) {
 			
 		}
 
+public String dwName;
+public String getDwName(){
+	return this.dwName;
+}
+public String dwServer;
+public String getDwServer(){
+	return this.dwServer;
+}
+public String dwUser;
+public String getDwUser(){
+	return this.dwUser;
+}
+public String dwPassword;
+public String getDwPassword(){
+	return this.dwPassword;
+}
 public String dbName;
 public String getDbName(){
 	return this.dbName;
-}
-public String dbPassword;
-public String getDbPassword(){
-	return this.dbPassword;
-}
-public String dbPort;
-public String getDbPort(){
-	return this.dbPort;
 }
 public String dbServer;
 public String getDbServer(){
@@ -215,25 +223,17 @@ public String dbUser;
 public String getDbUser(){
 	return this.dbUser;
 }
-public String dwName;
-public String getDwName(){
-	return this.dwName;
+public String dbPassword;
+public String getDbPassword(){
+	return this.dbPassword;
 }
-public String dwPassword;
-public String getDwPassword(){
-	return this.dwPassword;
+public String dbPort;
+public String getDbPort(){
+	return this.dbPort;
 }
 public String dwPort;
 public String getDwPort(){
 	return this.dwPort;
-}
-public String dwServer;
-public String getDwServer(){
-	return this.dwServer;
-}
-public String dwUser;
-public String getDwUser(){
-	return this.dwUser;
 }
 public String dwTemplate;
 public String getDwTemplate(){
@@ -2222,10 +2222,6 @@ if(dbschema_tPostgresqlOutput_2 == null || dbschema_tPostgresqlOutput_2.trim().l
 	tableName_tPostgresqlOutput_2 = dbschema_tPostgresqlOutput_2 + "\".\"" + "cd_tbl";
 }
 
-        int updateKeyCount_tPostgresqlOutput_2 = 2;
-        if(updateKeyCount_tPostgresqlOutput_2 < 1) {
-            throw new RuntimeException("For update, Schema must have a key");
-        }
 int nb_line_tPostgresqlOutput_2 = 0;
 int nb_line_update_tPostgresqlOutput_2 = 0;
 int nb_line_inserted_tPostgresqlOutput_2 = 0;
@@ -2261,14 +2257,10 @@ int count_tPostgresqlOutput_2=0;
                 stmtTrunc_tPostgresqlOutput_2.executeUpdate("TRUNCATE TABLE \"" + tableName_tPostgresqlOutput_2 + "\"");
                 deletedCount_tPostgresqlOutput_2 += rsTruncCountNumber_tPostgresqlOutput_2;
             }
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement("SELECT COUNT(1) FROM \"" + tableName_tPostgresqlOutput_2 + "\" WHERE \"set_mnemonic\" = ? AND \"cd_mnemonic\" = ?");
-	    resourceMap.put("pstmt_tPostgresqlOutput_2", pstmt_tPostgresqlOutput_2);
 	    String insert_tPostgresqlOutput_2 = "INSERT INTO \"" + tableName_tPostgresqlOutput_2 + "\" (\"set_mnemonic\",\"cd_mnemonic\",\"display\") VALUES (?,?,?)";
-	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
-	    resourceMap.put("pstmtInsert_tPostgresqlOutput_2", pstmtInsert_tPostgresqlOutput_2);
-	    String update_tPostgresqlOutput_2 = "UPDATE \"" + tableName_tPostgresqlOutput_2 + "\" SET \"display\" = ? WHERE \"set_mnemonic\" = ? AND \"cd_mnemonic\" = ?";
-	    java.sql.PreparedStatement pstmtUpdate_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(update_tPostgresqlOutput_2);
-	    resourceMap.put("pstmtUpdate_tPostgresqlOutput_2", pstmtUpdate_tPostgresqlOutput_2);
+	    
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
+	    resourceMap.put("pstmt_tPostgresqlOutput_2", pstmt_tPostgresqlOutput_2);
 	    
 
  
@@ -2741,78 +2733,27 @@ pstmt_tPostgresqlOutput_2.setNull(2, java.sql.Types.VARCHAR);
 } else {pstmt_tPostgresqlOutput_2.setString(2, outputCodes.cd_mnemonic);
 }
 
-            int checkCount_tPostgresqlOutput_2 = -1;
-            try (java.sql.ResultSet rs_tPostgresqlOutput_2 = pstmt_tPostgresqlOutput_2.executeQuery()) {
-                while(rs_tPostgresqlOutput_2.next()) {
-                    checkCount_tPostgresqlOutput_2 = rs_tPostgresqlOutput_2.getInt(1);
-                }
-            }
-            if(checkCount_tPostgresqlOutput_2 > 0) {
-                        if(outputCodes.display == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(1, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(1, outputCodes.display);
+                    if(outputCodes.display == null) {
+pstmt_tPostgresqlOutput_2.setNull(3, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(3, outputCodes.display);
 }
 
-                        if(outputCodes.set_mnemonic == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(2 + count_tPostgresqlOutput_2, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(2 + count_tPostgresqlOutput_2, outputCodes.set_mnemonic);
-}
-
-                        if(outputCodes.cd_mnemonic == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(3 + count_tPostgresqlOutput_2, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(3 + count_tPostgresqlOutput_2, outputCodes.cd_mnemonic);
-}
-
-                try {
-					
-                    updatedCount_tPostgresqlOutput_2 = updatedCount_tPostgresqlOutput_2 + pstmtUpdate_tPostgresqlOutput_2.executeUpdate();
-                    nb_line_tPostgresqlOutput_2++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_2 = true;
-                        nb_line_tPostgresqlOutput_2++;
-                            row3 = new row3Struct();
-                                row3.set_mnemonic = outputCodes.set_mnemonic;
-                                row3.cd_mnemonic = outputCodes.cd_mnemonic;
-                                row3.display = outputCodes.display;
-                            rejectedCount_tPostgresqlOutput_2 = rejectedCount_tPostgresqlOutput_2 + 1;
-                            row3.errorCode = ((java.sql.SQLException)e).getSQLState();
-                            row3.errorMessage = e.getMessage() + " - Line: " + tos_count_tPostgresqlOutput_2;
-                }
-            } else {
-                        if(outputCodes.set_mnemonic == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(1, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(1, outputCodes.set_mnemonic);
-}
-
-                        if(outputCodes.cd_mnemonic == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(2, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(2, outputCodes.cd_mnemonic);
-}
-
-                        if(outputCodes.display == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(3, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(3, outputCodes.display);
-}
-
-                try {
-					
-                    insertedCount_tPostgresqlOutput_2 = insertedCount_tPostgresqlOutput_2 + pstmtInsert_tPostgresqlOutput_2.executeUpdate();
-                    nb_line_tPostgresqlOutput_2++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_2 = true;
-                        nb_line_tPostgresqlOutput_2++;
-                            row3 = new row3Struct();
-                                row3.set_mnemonic = outputCodes.set_mnemonic;
-                                row3.cd_mnemonic = outputCodes.cd_mnemonic;
-                                row3.display = outputCodes.display;
-                            rejectedCount_tPostgresqlOutput_2 = rejectedCount_tPostgresqlOutput_2 + 1;
-                            row3.errorCode = ((java.sql.SQLException)e).getSQLState();
-                            row3.errorMessage = e.getMessage() + " - Line: " + tos_count_tPostgresqlOutput_2;
-                }
+			
+            try {
+                nb_line_tPostgresqlOutput_2++;
+				
+                insertedCount_tPostgresqlOutput_2 = insertedCount_tPostgresqlOutput_2 + pstmt_tPostgresqlOutput_2.executeUpdate();
+				
+            } catch(java.lang.Exception e) {
+				
+                whetherReject_tPostgresqlOutput_2 = true;
+                        row3 = new row3Struct();
+                            row3.set_mnemonic = outputCodes.set_mnemonic;
+                            row3.cd_mnemonic = outputCodes.cd_mnemonic;
+                            row3.display = outputCodes.display;
+                        rejectedCount_tPostgresqlOutput_2 = rejectedCount_tPostgresqlOutput_2 + 1;
+                        row3.errorCode = ((java.sql.SQLException)e).getSQLState();
+                        row3.errorMessage = e.getMessage() + " - Line: " + tos_count_tPostgresqlOutput_2;
             }
             if(!whetherReject_tPostgresqlOutput_2) {
             }
@@ -3200,15 +3141,8 @@ end_Hash.put("tMap_1", System.currentTimeMillis());
 
 
 
-        if(pstmtUpdate_tPostgresqlOutput_2 != null){
-            pstmtUpdate_tPostgresqlOutput_2.close();
-            resourceMap.remove("pstmtUpdate_tPostgresqlOutput_2");
-        }
-        if(pstmtInsert_tPostgresqlOutput_2 != null){
-            pstmtInsert_tPostgresqlOutput_2.close();
-            resourceMap.remove("pstmtInsert_tPostgresqlOutput_2");
-        }
         if(pstmt_tPostgresqlOutput_2 != null) {
+        		
             pstmt_tPostgresqlOutput_2.close();
             resourceMap.remove("pstmt_tPostgresqlOutput_2");
         }
@@ -3378,14 +3312,6 @@ end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 
     if (resourceMap.get("statementClosed_tPostgresqlOutput_2") == null) {
-                java.sql.PreparedStatement pstmtUpdateToClose_tPostgresqlOutput_2 = null;
-                if ((pstmtUpdateToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmtUpdate_tPostgresqlOutput_2")) != null) {
-                    pstmtUpdateToClose_tPostgresqlOutput_2.close();
-                }
-                java.sql.PreparedStatement pstmtInsertToClose_tPostgresqlOutput_2 = null;
-                if ((pstmtInsertToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmtInsert_tPostgresqlOutput_2")) != null) {
-                    pstmtInsertToClose_tPostgresqlOutput_2.close();
-                }
                 java.sql.PreparedStatement pstmtToClose_tPostgresqlOutput_2 = null;
                 if ((pstmtToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmt_tPostgresqlOutput_2")) != null) {
                     pstmtToClose_tPostgresqlOutput_2.close();
@@ -9582,36 +9508,36 @@ end_Hash.put("tLogRow_3", System.currentTimeMillis());
 
 				}
             }
-				    context.setContextType("dbName", "id_String");
-				
-                context.dbName=(String) context.getProperty("dbName");
-				    context.setContextType("dbPassword", "id_String");
-				
-                context.dbPassword=(String) context.getProperty("dbPassword");
-				    context.setContextType("dbPort", "id_String");
-				
-                context.dbPort=(String) context.getProperty("dbPort");
-				    context.setContextType("dbServer", "id_String");
-				
-                context.dbServer=(String) context.getProperty("dbServer");
-				    context.setContextType("dbUser", "id_String");
-				
-                context.dbUser=(String) context.getProperty("dbUser");
 				    context.setContextType("dwName", "id_String");
 				
                 context.dwName=(String) context.getProperty("dwName");
-				    context.setContextType("dwPassword", "id_String");
-				
-                context.dwPassword=(String) context.getProperty("dwPassword");
-				    context.setContextType("dwPort", "id_String");
-				
-                context.dwPort=(String) context.getProperty("dwPort");
 				    context.setContextType("dwServer", "id_String");
 				
                 context.dwServer=(String) context.getProperty("dwServer");
 				    context.setContextType("dwUser", "id_String");
 				
                 context.dwUser=(String) context.getProperty("dwUser");
+				    context.setContextType("dwPassword", "id_String");
+				
+                context.dwPassword=(String) context.getProperty("dwPassword");
+				    context.setContextType("dbName", "id_String");
+				
+                context.dbName=(String) context.getProperty("dbName");
+				    context.setContextType("dbServer", "id_String");
+				
+                context.dbServer=(String) context.getProperty("dbServer");
+				    context.setContextType("dbUser", "id_String");
+				
+                context.dbUser=(String) context.getProperty("dbUser");
+				    context.setContextType("dbPassword", "id_String");
+				
+                context.dbPassword=(String) context.getProperty("dbPassword");
+				    context.setContextType("dbPort", "id_String");
+				
+                context.dbPort=(String) context.getProperty("dbPort");
+				    context.setContextType("dwPort", "id_String");
+				
+                context.dwPort=(String) context.getProperty("dwPort");
 				    context.setContextType("dwTemplate", "id_String");
 				
                 context.dwTemplate=(String) context.getProperty("dwTemplate");
@@ -9625,26 +9551,26 @@ end_Hash.put("tLogRow_3", System.currentTimeMillis());
 
 
         // get context value from parent directly
-        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("dbName")) {
-                context.dbName = (String) parentContextMap.get("dbName");
-            }if (parentContextMap.containsKey("dbPassword")) {
-                context.dbPassword = (String) parentContextMap.get("dbPassword");
-            }if (parentContextMap.containsKey("dbPort")) {
-                context.dbPort = (String) parentContextMap.get("dbPort");
-            }if (parentContextMap.containsKey("dbServer")) {
-                context.dbServer = (String) parentContextMap.get("dbServer");
-            }if (parentContextMap.containsKey("dbUser")) {
-                context.dbUser = (String) parentContextMap.get("dbUser");
-            }if (parentContextMap.containsKey("dwName")) {
+        if (parentContextMap != null && !parentContextMap.isEmpty()) {if (parentContextMap.containsKey("dwName")) {
                 context.dwName = (String) parentContextMap.get("dwName");
-            }if (parentContextMap.containsKey("dwPassword")) {
-                context.dwPassword = (String) parentContextMap.get("dwPassword");
-            }if (parentContextMap.containsKey("dwPort")) {
-                context.dwPort = (String) parentContextMap.get("dwPort");
             }if (parentContextMap.containsKey("dwServer")) {
                 context.dwServer = (String) parentContextMap.get("dwServer");
             }if (parentContextMap.containsKey("dwUser")) {
                 context.dwUser = (String) parentContextMap.get("dwUser");
+            }if (parentContextMap.containsKey("dwPassword")) {
+                context.dwPassword = (String) parentContextMap.get("dwPassword");
+            }if (parentContextMap.containsKey("dbName")) {
+                context.dbName = (String) parentContextMap.get("dbName");
+            }if (parentContextMap.containsKey("dbServer")) {
+                context.dbServer = (String) parentContextMap.get("dbServer");
+            }if (parentContextMap.containsKey("dbUser")) {
+                context.dbUser = (String) parentContextMap.get("dbUser");
+            }if (parentContextMap.containsKey("dbPassword")) {
+                context.dbPassword = (String) parentContextMap.get("dbPassword");
+            }if (parentContextMap.containsKey("dbPort")) {
+                context.dbPort = (String) parentContextMap.get("dbPort");
+            }if (parentContextMap.containsKey("dwPort")) {
+                context.dwPort = (String) parentContextMap.get("dwPort");
             }if (parentContextMap.containsKey("dwTemplate")) {
                 context.dwTemplate = (String) parentContextMap.get("dwTemplate");
             }if (parentContextMap.containsKey("dwWorking")) {
@@ -9892,6 +9818,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     221985 characters generated by Talend Open Studio for Data Integration 
- *     on the November 3, 2020 12:14:45 EST PM
+ *     217291 characters generated by Talend Open Studio for Data Integration 
+ *     on the March 28, 2021 10:50:00 AM EDT
  ************************************************************************************************/

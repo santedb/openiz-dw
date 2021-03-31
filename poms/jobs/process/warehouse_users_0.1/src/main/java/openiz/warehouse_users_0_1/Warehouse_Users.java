@@ -4436,58 +4436,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
     static byte[] commonByteArray_OPENIZ_Warehouse_Users = new byte[0];
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public BigDecimal vrsn_seq_id;
-
-				public BigDecimal getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -4496,52 +4448,16 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
+			    public String specialty_cs;
 
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
+				public String getSpecialty_cs () {
+					return this.specialty_cs;
 				}
 				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
-				}
-				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
-			    public String sts_cs;
-
-				public String getSts_cs () {
-					return this.sts_cs;
-				}
-				
-			    public java.util.Date dob;
-
-				public java.util.Date getDob () {
-					return this.dob;
-				}
-				
-			    public String dob_prec;
-
-				public String getDob_prec () {
-					return this.dob_prec;
-				}
-				
-			    public Object spec_cd_id;
-
-				public Object getSpec_cd_id () {
-					return this.spec_cd_id;
-				}
-				
-			    public String specialty_cs;
-
-				public String getSpecialty_cs () {
-					return this.specialty_cs;
 				}
 				
 			    public Object fac_id;
@@ -4618,41 +4534,13 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-						this.vrsn_seq_id = (BigDecimal) dis.readObject();
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
+					this.specialty_cs = readString(dis);
 					
 					this.obslt_utc = readDate(dis);
-					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
-					this.sts_cs = readString(dis);
-					
-					this.dob = readDate(dis);
-					
-					this.dob_prec = readString(dis);
-					
-						this.spec_cd_id = (Object) dis.readObject();
-					
-					this.specialty_cs = readString(dis);
 					
 						this.fac_id = (Object) dis.readObject();
 					
@@ -4681,75 +4569,19 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// BigDecimal
-				
-       			    	dos.writeObject(this.vrsn_seq_id);
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
+					// String
 				
-       			    	dos.writeObject(this.crt_usr_id);
+						writeString(this.specialty_cs,dos);
 					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
-					// String
-				
-						writeString(this.sts_cs,dos);
-					
-					// java.util.Date
-				
-						writeDate(this.dob,dos);
-					
-					// String
-				
-						writeString(this.dob_prec,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.spec_cd_id);
-					
-					// String
-				
-						writeString(this.specialty_cs,dos);
 					
 					// Object
 				
@@ -4772,24 +4604,10 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
-		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
-		sb.append(",sts_cs="+sts_cs);
-		sb.append(",dob="+String.valueOf(dob));
-		sb.append(",dob_prec="+dob_prec);
-		sb.append(",spec_cd_id="+String.valueOf(spec_cd_id));
 		sb.append(",specialty_cs="+specialty_cs);
+		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
 		sb.append(",fac_id="+String.valueOf(fac_id));
 		sb.append(",usr_id="+String.valueOf(usr_id));
 	    sb.append("]");
@@ -4835,60 +4653,20 @@ public static class row3Struct implements routines.system.IPersistableRow<row3St
 public static class after_tPostgresqlInput_2Struct implements routines.system.IPersistableRow<after_tPostgresqlInput_2Struct> {
     final static byte[] commonByteArrayLock_OPENIZ_Warehouse_Users = new byte[0];
     static byte[] commonByteArray_OPENIZ_Warehouse_Users = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public BigDecimal vrsn_seq_id;
-
-				public BigDecimal getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -4897,52 +4675,16 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
+			    public String specialty_cs;
 
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
+				public String getSpecialty_cs () {
+					return this.specialty_cs;
 				}
 				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
-				}
-				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
-			    public String sts_cs;
-
-				public String getSts_cs () {
-					return this.sts_cs;
-				}
-				
-			    public java.util.Date dob;
-
-				public java.util.Date getDob () {
-					return this.dob;
-				}
-				
-			    public String dob_prec;
-
-				public String getDob_prec () {
-					return this.dob_prec;
-				}
-				
-			    public Object spec_cd_id;
-
-				public Object getSpec_cd_id () {
-					return this.spec_cd_id;
-				}
-				
-			    public String specialty_cs;
-
-				public String getSpecialty_cs () {
-					return this.specialty_cs;
 				}
 				
 			    public Object fac_id;
@@ -4957,6 +4699,58 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 					return this.usr_id;
 				}
 				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.ent_id == null) ? 0 : this.ent_id.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final after_tPostgresqlInput_2Struct other = (after_tPostgresqlInput_2Struct) obj;
+		
+						if (this.ent_id == null) {
+							if (other.ent_id != null)
+								return false;
+						
+						} else if (!this.ent_id.equals(other.ent_id))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(after_tPostgresqlInput_2Struct other) {
+
+		other.ent_id = this.ent_id;
+	            other.crt_utc = this.crt_utc;
+	            other.specialty_cs = this.specialty_cs;
+	            other.obslt_utc = this.obslt_utc;
+	            other.fac_id = this.fac_id;
+	            other.usr_id = this.usr_id;
+	            
+	}
+
+	public void copyKeysDataTo(after_tPostgresqlInput_2Struct other) {
+
+		other.ent_id = this.ent_id;
+	            	
+	}
+
 
 
 
@@ -5019,41 +4813,13 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-						this.vrsn_seq_id = (BigDecimal) dis.readObject();
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
+					this.specialty_cs = readString(dis);
 					
 					this.obslt_utc = readDate(dis);
-					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
-					this.sts_cs = readString(dis);
-					
-					this.dob = readDate(dis);
-					
-					this.dob_prec = readString(dis);
-					
-						this.spec_cd_id = (Object) dis.readObject();
-					
-					this.specialty_cs = readString(dis);
 					
 						this.fac_id = (Object) dis.readObject();
 					
@@ -5082,75 +4848,19 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// BigDecimal
-				
-       			    	dos.writeObject(this.vrsn_seq_id);
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
+					// String
 				
-       			    	dos.writeObject(this.crt_usr_id);
+						writeString(this.specialty_cs,dos);
 					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
-					// String
-				
-						writeString(this.sts_cs,dos);
-					
-					// java.util.Date
-				
-						writeDate(this.dob,dos);
-					
-					// String
-				
-						writeString(this.dob_prec,dos);
-					
-					// Object
-				
-       			    	dos.writeObject(this.spec_cd_id);
-					
-					// String
-				
-						writeString(this.specialty_cs,dos);
 					
 					// Object
 				
@@ -5173,24 +4883,10 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
-		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
-		sb.append(",sts_cs="+sts_cs);
-		sb.append(",dob="+String.valueOf(dob));
-		sb.append(",dob_prec="+dob_prec);
-		sb.append(",spec_cd_id="+String.valueOf(spec_cd_id));
 		sb.append(",specialty_cs="+specialty_cs);
+		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
 		sb.append(",fac_id="+String.valueOf(fac_id));
 		sb.append(",usr_id="+String.valueOf(usr_id));
 	    sb.append("]");
@@ -5205,6 +4901,12 @@ public static class after_tPostgresqlInput_2Struct implements routines.system.IP
 
 		int returnValue = -1;
 		
+						returnValue = checkNullsAndCompare(this.ent_id, other.ent_id);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
 	    return returnValue;
     }
 
@@ -5458,11 +5160,12 @@ outputProvidersStruct outputProviders_tmp = new outputProvidersStruct();
 		    
 			java.sql.Statement stmt_tPostgresqlInput_2 = conn_tPostgresqlInput_2.createStatement();
 
-		    String dbquery_tPostgresqlInput_2 = "select pvdr_cur_vrsn_vw.* , mnemonic as specialty_cs, loc_id.trg_ent_id as fac_id, pvd_id.src_ent_id as usr_id\nfrom \n"
-+"	pvdr_cur_vrsn_vw left join cd_cur_vrsn_vw on (spec_cd_id = cd_id)\n	left join ent_rel_tbl loc_id on (loc_id.src_ent_id "
-+"= ent_id and typ_cd_id = '455F1772-F580-47E8-86BD-B5CE25D351F9' and loc_id.obslt_vrsn_seq_id is null)\n	left join ent_re"
-+"l_tbl pvd_id on (pvd_id.trg_ent_id = pvdr_cur_vrsn_vw.ent_id and typ_cd_id = '77B7A04B-C065-4FAF-8EC0-2CDAD4AE372B' and "
-+"pvd_id.obslt_vrsn_seq_id is null)\n";
+		    String dbquery_tPostgresqlInput_2 = "select ent_id, first(crt_utc) as crt_utc, first(specialty_cs) as specialty_cs, first(obslt_utc) as obslt_utc , first(fa"
++"c_id) as fac_id, first(usr_id) as usr_id \nfrom (\nselect pvdr_cur_vrsn_vw.* , mnemonic as specialty_cs, loc_id.trg_ent_"
++"id as fac_id, pvd_id.src_ent_id as usr_id\nfrom \n	pvdr_cur_vrsn_vw left join cd_cur_vrsn_vw on (spec_cd_id = cd_id)\n	l"
++"eft join ent_rel_tbl loc_id on (loc_id.src_ent_id = ent_id and typ_cd_id = '455F1772-F580-47E8-86BD-B5CE25D351F9' and lo"
++"c_id.obslt_vrsn_seq_id is null)\n	left join ent_rel_tbl pvd_id on (pvd_id.trg_ent_id = pvdr_cur_vrsn_vw.ent_id and typ_c"
++"d_id = '77B7A04B-C065-4FAF-8EC0-2CDAD4AE372B' and pvd_id.obslt_vrsn_seq_id is null)) I \ngroup by ent_id";
 			
 
             	globalMap.put("tPostgresqlInput_2_QUERY",dbquery_tPostgresqlInput_2);
@@ -5480,177 +5183,49 @@ outputProvidersStruct outputProviders_tmp = new outputProvidersStruct();
 		        nb_line_tPostgresqlInput_2++;
 		        
 							if(colQtyInRs_tPostgresqlInput_2 < 1) {
-								row3.ent_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(1) != null) {
-                row3.ent_vrsn_id = rs_tPostgresqlInput_2.getObject(1);
-            } else {
-                    row3.ent_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 2) {
-								row3.cls_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(2) != null) {
-                row3.cls_cd_id = rs_tPostgresqlInput_2.getObject(2);
-            } else {
-                    row3.cls_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 3) {
-								row3.dtr_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(3) != null) {
-                row3.dtr_cd_id = rs_tPostgresqlInput_2.getObject(3);
-            } else {
-                    row3.dtr_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 4) {
-								row3.tpl_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(4) != null) {
-                row3.tpl_id = rs_tPostgresqlInput_2.getObject(4);
-            } else {
-                    row3.tpl_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 5) {
-								row3.vrsn_seq_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(5) != null) {
-                row3.vrsn_seq_id = rs_tPostgresqlInput_2.getBigDecimal(5);
-            } else {
-                    row3.vrsn_seq_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 6) {
 								row3.ent_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_2.getObject(6) != null) {
-                row3.ent_id = rs_tPostgresqlInput_2.getObject(6);
+            if(rs_tPostgresqlInput_2.getObject(1) != null) {
+                row3.ent_id = rs_tPostgresqlInput_2.getObject(1);
             } else {
                     row3.ent_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 7) {
-								row3.rplc_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(7) != null) {
-                row3.rplc_vrsn_id = rs_tPostgresqlInput_2.getObject(7);
-            } else {
-                    row3.rplc_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 8) {
-								row3.sts_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(8) != null) {
-                row3.sts_cd_id = rs_tPostgresqlInput_2.getObject(8);
-            } else {
-                    row3.sts_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 9) {
-								row3.typ_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(9) != null) {
-                row3.typ_cd_id = rs_tPostgresqlInput_2.getObject(9);
-            } else {
-                    row3.typ_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 10) {
+							if(colQtyInRs_tPostgresqlInput_2 < 2) {
 								row3.crt_utc = null;
 							} else {
 										
-			row3.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_2, 10);
+			row3.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_2, 2);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 11) {
-								row3.crt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(11) != null) {
-                row3.crt_usr_id = rs_tPostgresqlInput_2.getObject(11);
-            } else {
-                    row3.crt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 12) {
-								row3.obslt_utc = null;
-							} else {
-										
-			row3.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_2, 12);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 13) {
-								row3.obslt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(13) != null) {
-                row3.obslt_usr_id = rs_tPostgresqlInput_2.getObject(13);
-            } else {
-                    row3.obslt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 14) {
-								row3.sts_cs = null;
-							} else {
-	                         		
-        	row3.sts_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 14, false);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 15) {
-								row3.dob = null;
-							} else {
-										
-			row3.dob = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_2, 15);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 16) {
-								row3.dob_prec = null;
-							} else {
-	                         		
-        	row3.dob_prec = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 16, false);
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 17) {
-								row3.spec_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_2.getObject(17) != null) {
-                row3.spec_cd_id = rs_tPostgresqlInput_2.getObject(17);
-            } else {
-                    row3.spec_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 18) {
+							if(colQtyInRs_tPostgresqlInput_2 < 3) {
 								row3.specialty_cs = null;
 							} else {
 	                         		
-        	row3.specialty_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 18, false);
+        	row3.specialty_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_2, 3, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 19) {
+							if(colQtyInRs_tPostgresqlInput_2 < 4) {
+								row3.obslt_utc = null;
+							} else {
+										
+			row3.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_2, 4);
+		                    }
+							if(colQtyInRs_tPostgresqlInput_2 < 5) {
 								row3.fac_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_2.getObject(19) != null) {
-                row3.fac_id = rs_tPostgresqlInput_2.getObject(19);
+            if(rs_tPostgresqlInput_2.getObject(5) != null) {
+                row3.fac_id = rs_tPostgresqlInput_2.getObject(5);
             } else {
                     row3.fac_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_2 < 20) {
+							if(colQtyInRs_tPostgresqlInput_2 < 6) {
 								row3.usr_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_2.getObject(20) != null) {
-                row3.usr_id = rs_tPostgresqlInput_2.getObject(20);
+            if(rs_tPostgresqlInput_2.getObject(6) != null) {
+                row3.usr_id = rs_tPostgresqlInput_2.getObject(6);
             } else {
                     row3.usr_id = null;
             }
@@ -13135,6 +12710,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     295808 characters generated by Talend Open Studio for Data Integration 
- *     on the November 3, 2020 12:14:45 EST PM
+ *     284469 characters generated by Talend Open Studio for Data Integration 
+ *     on the March 28, 2021 10:50:00 AM EDT
  ************************************************************************************************/

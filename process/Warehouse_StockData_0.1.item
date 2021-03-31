@@ -42,6 +42,20 @@
     <contextParameter comment="The template database" name="dwTemplate" prompt="dwTemplate?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_dw_tpl"/>
     <contextParameter comment="The name of the staged database to use" name="dwWorking" prompt="dwWorking?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_dw_work"/>
   </context>
+  <context confirmationNeeded="false" name="Archive">
+    <contextParameter comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timrdw_archive"/>
+    <contextParameter comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="fs-dev-psql10"/>
+    <contextParameter comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_archive_db"/>
+    <contextParameter comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="fs-dev-psql10"/>
+    <contextParameter comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="postgres"/>
+    <contextParameter comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
+    <contextParameter comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="5432"/>
+    <contextParameter comment="The template database" name="dwTemplate" prompt="dwTemplate?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_dw_tpl"/>
+    <contextParameter comment="The name of the staged database to use" name="dwWorking" prompt="dwWorking?" promptNeeded="false" repositoryContextId="_Heun0CR7Eeea06Gx0iDT9A" type="id_String" value="timr_dw_work_archive"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>

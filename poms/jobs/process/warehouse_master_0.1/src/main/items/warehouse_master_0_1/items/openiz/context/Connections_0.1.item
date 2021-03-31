@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_BlFbIFXHEeuuPfZKmGTTgw" confirmationNeeded="false" name="Archive">
+    <contextParameter xmi:id="_BlFbIVXHEeuuPfZKmGTTgw" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="timrdw_archive"/>
+    <contextParameter xmi:id="_BlFbIlXHEeuuPfZKmGTTgw" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="fs-dev-psql10"/>
+    <contextParameter xmi:id="_BlFbI1XHEeuuPfZKmGTTgw" comment="Server username for warehouse" name="dwUser" prompt="dwUser?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_BlFbJFXHEeuuPfZKmGTTgw" comment="Password for the datawarehouse" name="dwPassword" prompt="dwPassword?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_BlFbJVXHEeuuPfZKmGTTgw" comment="Name of the database primary server" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="timr_archive_db"/>
+    <contextParameter xmi:id="_BlFbJlXHEeuuPfZKmGTTgw" comment="Server of the primary openiz database" name="dbServer" prompt="dbServer?" promptNeeded="false" type="id_String" value="fs-dev-psql10"/>
+    <contextParameter xmi:id="_BlFbJ1XHEeuuPfZKmGTTgw" comment="User of the primary openiz db" name="dbUser" prompt="dbUser?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_BlFbKFXHEeuuPfZKmGTTgw" comment="Password of the primary openizdb" name="dbPassword" prompt="dbPassword?" promptNeeded="false" type="id_String" value="postgres"/>
+    <contextParameter xmi:id="_BlFbKVXHEeuuPfZKmGTTgw" comment="Port of the database server" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_BlFbKlXHEeuuPfZKmGTTgw" comment="Port of the warehouse server" name="dwPort" prompt="dwPort?" promptNeeded="false" type="id_String" value="5432"/>
+    <contextParameter xmi:id="_BlFbK1XHEeuuPfZKmGTTgw" comment="The template database" name="dwTemplate" prompt="dwTemplate?" promptNeeded="false" type="id_String" value="timr_dw_tpl"/>
+    <contextParameter xmi:id="_BlFbLFXHEeuuPfZKmGTTgw" comment="The name of the staged database to use" name="dwWorking" prompt="dwWorking?" promptNeeded="false" type="id_String" value="timr_dw_work_archive"/>
+  </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_dhmhEAlWEeqoyez3r4KLSg" confirmationNeeded="false" name="Default">
     <contextParameter xmi:id="_dhmhEQlWEeqoyez3r4KLSg" comment="Name of the warehouse database" name="dwName" prompt="dwName?" promptNeeded="false" type="id_String" value="timrdw"/>
     <contextParameter xmi:id="_dhmhEglWEeqoyez3r4KLSg" comment="Server address of warehouse" name="dwServer" prompt="dwServer?" promptNeeded="false" type="id_String" value="fs-dev-psql10"/>

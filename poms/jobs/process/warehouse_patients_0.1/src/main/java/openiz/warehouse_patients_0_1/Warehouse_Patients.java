@@ -2328,58 +2328,10 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
     static byte[] commonByteArray_OPENIZ_Warehouse_Patients = new byte[0];
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public Double vrsn_seq_id;
-
-				public Double getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -2388,46 +2340,16 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
-
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
-				}
-				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
 				}
 				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
 			    public String sts_cs;
 
 				public String getSts_cs () {
 					return this.sts_cs;
-				}
-				
-			    public Boolean mob_ind;
-
-				public Boolean getMob_ind () {
-					return this.mob_ind;
-				}
-				
-			    public Double lat;
-
-				public Double getLat () {
-					return this.lat;
-				}
-				
-			    public Double lng;
-
-				public Double getLng () {
-					return this.lng;
 				}
 				
 			    public Object parent_id;
@@ -2510,59 +2432,13 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.vrsn_seq_id = null;
-           				} else {
-           			    	this.vrsn_seq_id = dis.readDouble();
-           				}
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
-					
 					this.obslt_utc = readDate(dis);
 					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
 					this.sts_cs = readString(dis);
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.mob_ind = null;
-           				} else {
-           			    	this.mob_ind = dis.readBoolean();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lat = null;
-           				} else {
-           			    	this.lat = dis.readDouble();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lng = null;
-           				} else {
-           			    	this.lng = dis.readDouble();
-           				}
 					
 						this.parent_id = (Object) dis.readObject();
 					
@@ -2593,91 +2469,19 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// Double
-				
-						if(this.vrsn_seq_id == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.vrsn_seq_id);
-		            	}
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.crt_usr_id);
-					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
 					// String
 				
 						writeString(this.sts_cs,dos);
-					
-					// Boolean
-				
-						if(this.mob_ind == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeBoolean(this.mob_ind);
-		            	}
-					
-					// Double
-				
-						if(this.lat == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lat);
-		            	}
-					
-					// Double
-				
-						if(this.lng == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lng);
-		            	}
 					
 					// Object
 				
@@ -2704,23 +2508,10 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
 		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
 		sb.append(",sts_cs="+sts_cs);
-		sb.append(",mob_ind="+String.valueOf(mob_ind));
-		sb.append(",lat="+String.valueOf(lat));
-		sb.append(",lng="+String.valueOf(lng));
 		sb.append(",parent_id="+String.valueOf(parent_id));
 		sb.append(",type_mnemonic="+type_mnemonic);
 		sb.append(",tel_val="+tel_val);
@@ -2767,60 +2558,20 @@ public static class row12Struct implements routines.system.IPersistableRow<row12
 public static class after_tPostgresqlInput_3Struct implements routines.system.IPersistableRow<after_tPostgresqlInput_3Struct> {
     final static byte[] commonByteArrayLock_OPENIZ_Warehouse_Patients = new byte[0];
     static byte[] commonByteArray_OPENIZ_Warehouse_Patients = new byte[0];
+	protected static final int DEFAULT_HASHCODE = 1;
+    protected static final int PRIME = 31;
+    protected int hashCode = DEFAULT_HASHCODE;
+    public boolean hashCodeDirty = true;
+
+    public String loopKey;
+
+
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public Double vrsn_seq_id;
-
-				public Double getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -2829,46 +2580,16 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
-
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
-				}
-				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
 				}
 				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
 			    public String sts_cs;
 
 				public String getSts_cs () {
 					return this.sts_cs;
-				}
-				
-			    public Boolean mob_ind;
-
-				public Boolean getMob_ind () {
-					return this.mob_ind;
-				}
-				
-			    public Double lat;
-
-				public Double getLat () {
-					return this.lat;
-				}
-				
-			    public Double lng;
-
-				public Double getLng () {
-					return this.lng;
 				}
 				
 			    public Object parent_id;
@@ -2889,6 +2610,59 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 					return this.tel_val;
 				}
 				
+
+
+	@Override
+	public int hashCode() {
+		if (this.hashCodeDirty) {
+			final int prime = PRIME;
+			int result = DEFAULT_HASHCODE;
+	
+						result = prime * result + ((this.ent_id == null) ? 0 : this.ent_id.hashCode());
+					
+    		this.hashCode = result;
+    		this.hashCodeDirty = false;
+		}
+		return this.hashCode;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		final after_tPostgresqlInput_3Struct other = (after_tPostgresqlInput_3Struct) obj;
+		
+						if (this.ent_id == null) {
+							if (other.ent_id != null)
+								return false;
+						
+						} else if (!this.ent_id.equals(other.ent_id))
+						
+							return false;
+					
+
+		return true;
+    }
+
+	public void copyDataTo(after_tPostgresqlInput_3Struct other) {
+
+		other.ent_id = this.ent_id;
+	            other.crt_utc = this.crt_utc;
+	            other.obslt_utc = this.obslt_utc;
+	            other.sts_cs = this.sts_cs;
+	            other.parent_id = this.parent_id;
+	            other.type_mnemonic = this.type_mnemonic;
+	            other.tel_val = this.tel_val;
+	            
+	}
+
+	public void copyKeysDataTo(after_tPostgresqlInput_3Struct other) {
+
+		other.ent_id = this.ent_id;
+	            	
+	}
+
 
 
 
@@ -2951,59 +2725,13 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.vrsn_seq_id = null;
-           				} else {
-           			    	this.vrsn_seq_id = dis.readDouble();
-           				}
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
-					
 					this.obslt_utc = readDate(dis);
 					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
 					this.sts_cs = readString(dis);
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.mob_ind = null;
-           				} else {
-           			    	this.mob_ind = dis.readBoolean();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lat = null;
-           				} else {
-           			    	this.lat = dis.readDouble();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lng = null;
-           				} else {
-           			    	this.lng = dis.readDouble();
-           				}
 					
 						this.parent_id = (Object) dis.readObject();
 					
@@ -3034,91 +2762,19 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// Double
-				
-						if(this.vrsn_seq_id == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.vrsn_seq_id);
-		            	}
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.crt_usr_id);
-					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
 					// String
 				
 						writeString(this.sts_cs,dos);
-					
-					// Boolean
-				
-						if(this.mob_ind == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeBoolean(this.mob_ind);
-		            	}
-					
-					// Double
-				
-						if(this.lat == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lat);
-		            	}
-					
-					// Double
-				
-						if(this.lng == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lng);
-		            	}
 					
 					// Object
 				
@@ -3145,23 +2801,10 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
 		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
 		sb.append(",sts_cs="+sts_cs);
-		sb.append(",mob_ind="+String.valueOf(mob_ind));
-		sb.append(",lat="+String.valueOf(lat));
-		sb.append(",lng="+String.valueOf(lng));
 		sb.append(",parent_id="+String.valueOf(parent_id));
 		sb.append(",type_mnemonic="+type_mnemonic);
 		sb.append(",tel_val="+tel_val);
@@ -3177,6 +2820,12 @@ public static class after_tPostgresqlInput_3Struct implements routines.system.IP
 
 		int returnValue = -1;
 		
+						returnValue = checkNullsAndCompare(this.ent_id, other.ent_id);
+						if(returnValue != 0) {
+							return returnValue;
+						}
+
+					
 	    return returnValue;
     }
 
@@ -3279,10 +2928,6 @@ if(dbschema_tPostgresqlOutput_2 == null || dbschema_tPostgresqlOutput_2.trim().l
 	tableName_tPostgresqlOutput_2 = dbschema_tPostgresqlOutput_2 + "\".\"" + "fac_tbl";
 }
 
-        int updateKeyCount_tPostgresqlOutput_2 = 1;
-        if(updateKeyCount_tPostgresqlOutput_2 < 1) {
-            throw new RuntimeException("For update, Schema must have a key");
-        }
 int nb_line_tPostgresqlOutput_2 = 0;
 int nb_line_update_tPostgresqlOutput_2 = 0;
 int nb_line_inserted_tPostgresqlOutput_2 = 0;
@@ -3304,16 +2949,14 @@ String dbUser_tPostgresqlOutput_2 = null;
 	
 
 
+   int batchSize_tPostgresqlOutput_2 = 10000;
+   int batchSizeCounter_tPostgresqlOutput_2=0;
 
 int count_tPostgresqlOutput_2=0;
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement("SELECT COUNT(1) FROM \"" + tableName_tPostgresqlOutput_2 + "\" WHERE \"fac_id\" = ?");
-	    resourceMap.put("pstmt_tPostgresqlOutput_2", pstmt_tPostgresqlOutput_2);
 	    String insert_tPostgresqlOutput_2 = "INSERT INTO \"" + tableName_tPostgresqlOutput_2 + "\" (\"trg_pop\",\"fac_id\",\"crt_etl_id\",\"upd_etl_id\",\"crt_utc\",\"upd_utc\",\"obslt_utc\",\"sts_cs\",\"type_mnemonic\",\"parent_id\",\"tel\") VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
-	    resourceMap.put("pstmtInsert_tPostgresqlOutput_2", pstmtInsert_tPostgresqlOutput_2);
-	    String update_tPostgresqlOutput_2 = "UPDATE \"" + tableName_tPostgresqlOutput_2 + "\" SET \"trg_pop\" = ?,\"crt_etl_id\" = ?,\"upd_etl_id\" = ?,\"crt_utc\" = ?,\"upd_utc\" = ?,\"obslt_utc\" = ?,\"sts_cs\" = ?,\"type_mnemonic\" = ?,\"parent_id\" = ?,\"tel\" = ? WHERE \"fac_id\" = ?";
-	    java.sql.PreparedStatement pstmtUpdate_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(update_tPostgresqlOutput_2);
-	    resourceMap.put("pstmtUpdate_tPostgresqlOutput_2", pstmtUpdate_tPostgresqlOutput_2);
+	    
+	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_2 = conn_tPostgresqlOutput_2.prepareStatement(insert_tPostgresqlOutput_2);
+	    resourceMap.put("pstmt_tPostgresqlOutput_2", pstmt_tPostgresqlOutput_2);
 	    
 
  
@@ -3448,11 +3091,12 @@ outputFacilitiesStruct outputFacilities_tmp = new outputFacilitiesStruct();
 			java.sql.Statement stmt_tPostgresqlInput_3 = conn_tPostgresqlInput_3.createStatement();
 
 		    String dbquery_tPostgresqlInput_3 = "with parent_rel as (\n	select * from ent_rel_tbl where rel_typ_cd_id = 'bfcbb345-86db-43ba-b47e-e7411276ac7c' and obslt"
-+"_vrsn_seq_id is null\n)\nselect plc_cur_vrsn_vw.*, parent.ent_id as parent_id, type.mnemonic as type_mnemonic, tel.tel_v"
-+"al from plc_cur_vrsn_vw \nleft join cd_cur_vrsn_vw as type on (type.cd_id = plc_cur_vrsn_vw.typ_cd_id)\nleft join parent"
-+"_rel on (plc_cur_vrsn_vw.ent_id = parent_rel.src_ent_id) \nleft join plc_cur_vrsn_vw as parent on (parent_rel.trg_ent_id"
-+" = parent.ent_id)\nleft join ent_cur_tel_vw as tel on (tel.ent_id = plc_cur_vrsn_vw.ent_id)\nwhere\nplc_cur_vrsn_vw.cls_"
-+"cd_id = 'ff34dfa7-c6d3-4f8b-bc9f-14bcdc13ba6c'\norder by parent_id, vrsn_seq_id"
++"_vrsn_seq_id is null\n)\nselect plc_cur_vrsn_vw.ent_id, first(plc_cur_vrsn_vw.crt_utc) as crt_utc, first(plc_cur_vrsn_vw"
++".obslt_utc) as obslt_utc, first(plc_cur_vrsn_vw.sts_cs) as sts_cs,   first(parent.ent_id) as parent_id, first(type.mnemo"
++"nic) as type_mnemonic, null as tel_val \nfrom plc_cur_vrsn_vw \nleft join cd_cur_vrsn_vw as type on (type.cd_id = plc_cu"
++"r_vrsn_vw.typ_cd_id)\nleft join parent_rel on (plc_cur_vrsn_vw.ent_id = parent_rel.src_ent_id) \nleft join plc_cur_vrsn_"
++"vw as parent on (parent_rel.trg_ent_id = parent.ent_id)\nwhere\nplc_cur_vrsn_vw.cls_cd_id = 'ff34dfa7-c6d3-4f8b-bc9f-14b"
++"cdc13ba6c'\ngroup by plc_cur_vrsn_vw.ent_id\norder by parent_id"
 ;
 			
 
@@ -3471,184 +3115,54 @@ outputFacilitiesStruct outputFacilities_tmp = new outputFacilitiesStruct();
 		        nb_line_tPostgresqlInput_3++;
 		        
 							if(colQtyInRs_tPostgresqlInput_3 < 1) {
-								row12.ent_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(1) != null) {
-                row12.ent_vrsn_id = rs_tPostgresqlInput_3.getObject(1);
-            } else {
-                    row12.ent_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 2) {
-								row12.cls_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(2) != null) {
-                row12.cls_cd_id = rs_tPostgresqlInput_3.getObject(2);
-            } else {
-                    row12.cls_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 3) {
-								row12.dtr_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(3) != null) {
-                row12.dtr_cd_id = rs_tPostgresqlInput_3.getObject(3);
-            } else {
-                    row12.dtr_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 4) {
-								row12.tpl_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(4) != null) {
-                row12.tpl_id = rs_tPostgresqlInput_3.getObject(4);
-            } else {
-                    row12.tpl_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 5) {
-								row12.vrsn_seq_id = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_3.getObject(5) != null) {
-                row12.vrsn_seq_id = rs_tPostgresqlInput_3.getDouble(5);
-            } else {
-                    row12.vrsn_seq_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 6) {
 								row12.ent_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_3.getObject(6) != null) {
-                row12.ent_id = rs_tPostgresqlInput_3.getObject(6);
+            if(rs_tPostgresqlInput_3.getObject(1) != null) {
+                row12.ent_id = rs_tPostgresqlInput_3.getObject(1);
             } else {
                     row12.ent_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 7) {
-								row12.rplc_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(7) != null) {
-                row12.rplc_vrsn_id = rs_tPostgresqlInput_3.getObject(7);
-            } else {
-                    row12.rplc_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 8) {
-								row12.sts_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(8) != null) {
-                row12.sts_cd_id = rs_tPostgresqlInput_3.getObject(8);
-            } else {
-                    row12.sts_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 9) {
-								row12.typ_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(9) != null) {
-                row12.typ_cd_id = rs_tPostgresqlInput_3.getObject(9);
-            } else {
-                    row12.typ_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 10) {
+							if(colQtyInRs_tPostgresqlInput_3 < 2) {
 								row12.crt_utc = null;
 							} else {
 										
-			row12.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_3, 10);
+			row12.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_3, 2);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 11) {
-								row12.crt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(11) != null) {
-                row12.crt_usr_id = rs_tPostgresqlInput_3.getObject(11);
-            } else {
-                    row12.crt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 12) {
+							if(colQtyInRs_tPostgresqlInput_3 < 3) {
 								row12.obslt_utc = null;
 							} else {
 										
-			row12.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_3, 12);
+			row12.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_3, 3);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 13) {
-								row12.obslt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_3.getObject(13) != null) {
-                row12.obslt_usr_id = rs_tPostgresqlInput_3.getObject(13);
-            } else {
-                    row12.obslt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 14) {
+							if(colQtyInRs_tPostgresqlInput_3 < 4) {
 								row12.sts_cs = null;
 							} else {
 	                         		
-        	row12.sts_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 14, false);
+        	row12.sts_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 4, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 15) {
-								row12.mob_ind = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_3.getObject(15) != null) {
-                row12.mob_ind = rs_tPostgresqlInput_3.getBoolean(15);
-            } else {
-                    row12.mob_ind = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 16) {
-								row12.lat = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_3.getObject(16) != null) {
-                row12.lat = rs_tPostgresqlInput_3.getDouble(16);
-            } else {
-                    row12.lat = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 17) {
-								row12.lng = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_3.getObject(17) != null) {
-                row12.lng = rs_tPostgresqlInput_3.getDouble(17);
-            } else {
-                    row12.lng = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 18) {
+							if(colQtyInRs_tPostgresqlInput_3 < 5) {
 								row12.parent_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_3.getObject(18) != null) {
-                row12.parent_id = rs_tPostgresqlInput_3.getObject(18);
+            if(rs_tPostgresqlInput_3.getObject(5) != null) {
+                row12.parent_id = rs_tPostgresqlInput_3.getObject(5);
             } else {
                     row12.parent_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 19) {
+							if(colQtyInRs_tPostgresqlInput_3 < 6) {
 								row12.type_mnemonic = null;
 							} else {
 	                         		
-        	row12.type_mnemonic = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 19, false);
+        	row12.type_mnemonic = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 6, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_3 < 20) {
+							if(colQtyInRs_tPostgresqlInput_3 < 7) {
 								row12.tel_val = null;
 							} else {
 	                         		
-        	row12.tel_val = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 20, false);
+        	row12.tel_val = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_3, 7, false);
 		                    }
 					
 
@@ -4041,160 +3555,106 @@ if(outputFacilities != null) {
 
 
         whetherReject_tPostgresqlOutput_2 = false;
+                    if(outputFacilities.trg_pop == null) {
+pstmt_tPostgresqlOutput_2.setNull(1, java.sql.Types.INTEGER);
+} else {pstmt_tPostgresqlOutput_2.setInt(1, outputFacilities.trg_pop);
+}
+
                     if(outputFacilities.fac_id == null) {
-pstmt_tPostgresqlOutput_2.setNull(1, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_2.setObject(1, outputFacilities.fac_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_2.setNull(2, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_2.setObject(2, outputFacilities.fac_id, java.sql.Types.OTHER);
 }
 
-            int checkCount_tPostgresqlOutput_2 = -1;
-            try (java.sql.ResultSet rs_tPostgresqlOutput_2 = pstmt_tPostgresqlOutput_2.executeQuery()) {
-                while(rs_tPostgresqlOutput_2.next()) {
-                    checkCount_tPostgresqlOutput_2 = rs_tPostgresqlOutput_2.getInt(1);
-                }
-            }
-            if(checkCount_tPostgresqlOutput_2 > 0) {
-                        if(outputFacilities.trg_pop == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(1, java.sql.Types.INTEGER);
-} else {pstmtUpdate_tPostgresqlOutput_2.setInt(1, outputFacilities.trg_pop);
+                    if(outputFacilities.crt_etl_id == null) {
+pstmt_tPostgresqlOutput_2.setNull(3, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_2.setObject(3, outputFacilities.crt_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(outputFacilities.crt_etl_id == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(2, java.sql.Types.OTHER);
-} else {pstmtUpdate_tPostgresqlOutput_2.setObject(2, outputFacilities.crt_etl_id, java.sql.Types.OTHER);
+                    if(outputFacilities.upd_etl_id == null) {
+pstmt_tPostgresqlOutput_2.setNull(4, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_2.setObject(4, outputFacilities.upd_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(outputFacilities.upd_etl_id == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(3, java.sql.Types.OTHER);
-} else {pstmtUpdate_tPostgresqlOutput_2.setObject(3, outputFacilities.upd_etl_id, java.sql.Types.OTHER);
-}
-
-                        if(outputFacilities.crt_utc != null) {
-pstmtUpdate_tPostgresqlOutput_2.setTimestamp(4, new java.sql.Timestamp(outputFacilities.crt_utc.getTime()));
+                    if(outputFacilities.crt_utc != null) {
+pstmt_tPostgresqlOutput_2.setTimestamp(5, new java.sql.Timestamp(outputFacilities.crt_utc.getTime()));
 } else {
-pstmtUpdate_tPostgresqlOutput_2.setNull(4, java.sql.Types.TIMESTAMP);
+pstmt_tPostgresqlOutput_2.setNull(5, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputFacilities.upd_utc != null) {
-pstmtUpdate_tPostgresqlOutput_2.setTimestamp(5, new java.sql.Timestamp(outputFacilities.upd_utc.getTime()));
+                    if(outputFacilities.upd_utc != null) {
+pstmt_tPostgresqlOutput_2.setTimestamp(6, new java.sql.Timestamp(outputFacilities.upd_utc.getTime()));
 } else {
-pstmtUpdate_tPostgresqlOutput_2.setNull(5, java.sql.Types.TIMESTAMP);
+pstmt_tPostgresqlOutput_2.setNull(6, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputFacilities.obslt_utc != null) {
-pstmtUpdate_tPostgresqlOutput_2.setTimestamp(6, new java.sql.Timestamp(outputFacilities.obslt_utc.getTime()));
+                    if(outputFacilities.obslt_utc != null) {
+pstmt_tPostgresqlOutput_2.setTimestamp(7, new java.sql.Timestamp(outputFacilities.obslt_utc.getTime()));
 } else {
-pstmtUpdate_tPostgresqlOutput_2.setNull(6, java.sql.Types.TIMESTAMP);
+pstmt_tPostgresqlOutput_2.setNull(7, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputFacilities.sts_cs == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(7, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(7, outputFacilities.sts_cs);
+                    if(outputFacilities.sts_cs == null) {
+pstmt_tPostgresqlOutput_2.setNull(8, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(8, outputFacilities.sts_cs);
 }
 
-                        if(outputFacilities.type_mnemonic == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(8, outputFacilities.type_mnemonic);
+                    if(outputFacilities.type_mnemonic == null) {
+pstmt_tPostgresqlOutput_2.setNull(9, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(9, outputFacilities.type_mnemonic);
 }
 
-                        if(outputFacilities.parent_id == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(9, java.sql.Types.OTHER);
-} else {pstmtUpdate_tPostgresqlOutput_2.setObject(9, outputFacilities.parent_id, java.sql.Types.OTHER);
+                    if(outputFacilities.parent_id == null) {
+pstmt_tPostgresqlOutput_2.setNull(10, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_2.setObject(10, outputFacilities.parent_id, java.sql.Types.OTHER);
 }
 
-                        if(outputFacilities.tel == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(10, java.sql.Types.VARCHAR);
-} else {pstmtUpdate_tPostgresqlOutput_2.setString(10, outputFacilities.tel);
+                    if(outputFacilities.tel == null) {
+pstmt_tPostgresqlOutput_2.setNull(11, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_2.setString(11, outputFacilities.tel);
 }
 
-                        if(outputFacilities.fac_id == null) {
-pstmtUpdate_tPostgresqlOutput_2.setNull(11 + count_tPostgresqlOutput_2, java.sql.Types.OTHER);
-} else {pstmtUpdate_tPostgresqlOutput_2.setObject(11 + count_tPostgresqlOutput_2, outputFacilities.fac_id);
-}
-
-                try {
-					
-                    updatedCount_tPostgresqlOutput_2 = updatedCount_tPostgresqlOutput_2 + pstmtUpdate_tPostgresqlOutput_2.executeUpdate();
-                    nb_line_tPostgresqlOutput_2++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_2 = true;
-                        nb_line_tPostgresqlOutput_2++;
-                            System.err.print(e.getMessage());
-                }
-            } else {
-                        if(outputFacilities.trg_pop == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(1, java.sql.Types.INTEGER);
-} else {pstmtInsert_tPostgresqlOutput_2.setInt(1, outputFacilities.trg_pop);
-}
-
-                        if(outputFacilities.fac_id == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(2, java.sql.Types.OTHER);
-} else {pstmtInsert_tPostgresqlOutput_2.setObject(2, outputFacilities.fac_id, java.sql.Types.OTHER);
-}
-
-                        if(outputFacilities.crt_etl_id == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(3, java.sql.Types.OTHER);
-} else {pstmtInsert_tPostgresqlOutput_2.setObject(3, outputFacilities.crt_etl_id, java.sql.Types.OTHER);
-}
-
-                        if(outputFacilities.upd_etl_id == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(4, java.sql.Types.OTHER);
-} else {pstmtInsert_tPostgresqlOutput_2.setObject(4, outputFacilities.upd_etl_id, java.sql.Types.OTHER);
-}
-
-                        if(outputFacilities.crt_utc != null) {
-pstmtInsert_tPostgresqlOutput_2.setTimestamp(5, new java.sql.Timestamp(outputFacilities.crt_utc.getTime()));
-} else {
-pstmtInsert_tPostgresqlOutput_2.setNull(5, java.sql.Types.TIMESTAMP);
-}
-
-                        if(outputFacilities.upd_utc != null) {
-pstmtInsert_tPostgresqlOutput_2.setTimestamp(6, new java.sql.Timestamp(outputFacilities.upd_utc.getTime()));
-} else {
-pstmtInsert_tPostgresqlOutput_2.setNull(6, java.sql.Types.TIMESTAMP);
-}
-
-                        if(outputFacilities.obslt_utc != null) {
-pstmtInsert_tPostgresqlOutput_2.setTimestamp(7, new java.sql.Timestamp(outputFacilities.obslt_utc.getTime()));
-} else {
-pstmtInsert_tPostgresqlOutput_2.setNull(7, java.sql.Types.TIMESTAMP);
-}
-
-                        if(outputFacilities.sts_cs == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(8, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(8, outputFacilities.sts_cs);
-}
-
-                        if(outputFacilities.type_mnemonic == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(9, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(9, outputFacilities.type_mnemonic);
-}
-
-                        if(outputFacilities.parent_id == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(10, java.sql.Types.OTHER);
-} else {pstmtInsert_tPostgresqlOutput_2.setObject(10, outputFacilities.parent_id, java.sql.Types.OTHER);
-}
-
-                        if(outputFacilities.tel == null) {
-pstmtInsert_tPostgresqlOutput_2.setNull(11, java.sql.Types.VARCHAR);
-} else {pstmtInsert_tPostgresqlOutput_2.setString(11, outputFacilities.tel);
-}
-
-                try {
-					
-                    insertedCount_tPostgresqlOutput_2 = insertedCount_tPostgresqlOutput_2 + pstmtInsert_tPostgresqlOutput_2.executeUpdate();
-                    nb_line_tPostgresqlOutput_2++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_2 = true;
-                        nb_line_tPostgresqlOutput_2++;
-                            System.err.print(e.getMessage());
-                }
-            }
+			
+    		pstmt_tPostgresqlOutput_2.addBatch();
+    		nb_line_tPostgresqlOutput_2++;
+    		  
+    		  batchSizeCounter_tPostgresqlOutput_2++;
+    		  
             if(!whetherReject_tPostgresqlOutput_2) {
             }
+    			if ((batchSize_tPostgresqlOutput_2 > 0) && (batchSize_tPostgresqlOutput_2 <= batchSizeCounter_tPostgresqlOutput_2)) {
+                try {
+						int countSum_tPostgresqlOutput_2 = 0;
+						    
+						for(int countEach_tPostgresqlOutput_2: pstmt_tPostgresqlOutput_2.executeBatch()) {
+							countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
+						}
+				    	
+				    		insertedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
+				    	
+            	    	batchSizeCounter_tPostgresqlOutput_2 = 0;
+                }catch (java.sql.BatchUpdateException e_tPostgresqlOutput_2){
+				    	java.sql.SQLException ne_tPostgresqlOutput_2 = e_tPostgresqlOutput_2.getNextException(),sqle_tPostgresqlOutput_2=null;
+				    	String errormessage_tPostgresqlOutput_2;
+						if (ne_tPostgresqlOutput_2 != null) {
+							// build new exception to provide the original cause
+							sqle_tPostgresqlOutput_2 = new java.sql.SQLException(e_tPostgresqlOutput_2.getMessage() + "\ncaused by: " + ne_tPostgresqlOutput_2.getMessage(), ne_tPostgresqlOutput_2.getSQLState(), ne_tPostgresqlOutput_2.getErrorCode(), ne_tPostgresqlOutput_2);
+							errormessage_tPostgresqlOutput_2 = sqle_tPostgresqlOutput_2.getMessage();
+						}else{
+							errormessage_tPostgresqlOutput_2 = e_tPostgresqlOutput_2.getMessage();
+						}
+				    	
+				    	int countSum_tPostgresqlOutput_2 = 0;
+						for(int countEach_tPostgresqlOutput_2: e_tPostgresqlOutput_2.getUpdateCounts()) {
+							countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
+						}
+						
+				    		insertedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
+				    	
+				    	System.err.println(errormessage_tPostgresqlOutput_2);
+				    	
+					}
+    			}
+    		
 
  
 
@@ -4401,15 +3861,42 @@ end_Hash.put("tMap_2", System.currentTimeMillis());
 
 
 
-        if(pstmtUpdate_tPostgresqlOutput_2 != null){
-            pstmtUpdate_tPostgresqlOutput_2.close();
-            resourceMap.remove("pstmtUpdate_tPostgresqlOutput_2");
-        }
-        if(pstmtInsert_tPostgresqlOutput_2 != null){
-            pstmtInsert_tPostgresqlOutput_2.close();
-            resourceMap.remove("pstmtInsert_tPostgresqlOutput_2");
-        }
+	    try {
+				int countSum_tPostgresqlOutput_2 = 0;
+				if (pstmt_tPostgresqlOutput_2 != null && batchSizeCounter_tPostgresqlOutput_2 > 0) {
+						
+					for(int countEach_tPostgresqlOutput_2: pstmt_tPostgresqlOutput_2.executeBatch()) {
+						countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
+					}
+						
+				}
+		    	
+		    		insertedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
+		    	
+	    }catch (java.sql.BatchUpdateException e_tPostgresqlOutput_2){
+	    	java.sql.SQLException ne_tPostgresqlOutput_2 = e_tPostgresqlOutput_2.getNextException(),sqle_tPostgresqlOutput_2=null;
+	    	String errormessage_tPostgresqlOutput_2;
+			if (ne_tPostgresqlOutput_2 != null) {
+				// build new exception to provide the original cause
+				sqle_tPostgresqlOutput_2 = new java.sql.SQLException(e_tPostgresqlOutput_2.getMessage() + "\ncaused by: " + ne_tPostgresqlOutput_2.getMessage(), ne_tPostgresqlOutput_2.getSQLState(), ne_tPostgresqlOutput_2.getErrorCode(), ne_tPostgresqlOutput_2);
+				errormessage_tPostgresqlOutput_2 = sqle_tPostgresqlOutput_2.getMessage();
+			}else{
+				errormessage_tPostgresqlOutput_2 = e_tPostgresqlOutput_2.getMessage();
+			}
+	    	
+	    	int countSum_tPostgresqlOutput_2 = 0;
+			for(int countEach_tPostgresqlOutput_2: e_tPostgresqlOutput_2.getUpdateCounts()) {
+				countSum_tPostgresqlOutput_2 += (countEach_tPostgresqlOutput_2 < 0 ? 0 : countEach_tPostgresqlOutput_2);
+			}
+			
+	    		insertedCount_tPostgresqlOutput_2 += countSum_tPostgresqlOutput_2;
+	    	
+	    	System.err.println(errormessage_tPostgresqlOutput_2);
+	    	
+		}
+	    
         if(pstmt_tPostgresqlOutput_2 != null) {
+        		
             pstmt_tPostgresqlOutput_2.close();
             resourceMap.remove("pstmt_tPostgresqlOutput_2");
         }
@@ -4541,14 +4028,6 @@ end_Hash.put("tPostgresqlOutput_2", System.currentTimeMillis());
 
 
     if (resourceMap.get("statementClosed_tPostgresqlOutput_2") == null) {
-                java.sql.PreparedStatement pstmtUpdateToClose_tPostgresqlOutput_2 = null;
-                if ((pstmtUpdateToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmtUpdate_tPostgresqlOutput_2")) != null) {
-                    pstmtUpdateToClose_tPostgresqlOutput_2.close();
-                }
-                java.sql.PreparedStatement pstmtInsertToClose_tPostgresqlOutput_2 = null;
-                if ((pstmtInsertToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmtInsert_tPostgresqlOutput_2")) != null) {
-                    pstmtInsertToClose_tPostgresqlOutput_2.close();
-                }
                 java.sql.PreparedStatement pstmtToClose_tPostgresqlOutput_2 = null;
                 if ((pstmtToClose_tPostgresqlOutput_2 = (java.sql.PreparedStatement) resourceMap.remove("pstmt_tPostgresqlOutput_2")) != null) {
                     pstmtToClose_tPostgresqlOutput_2.close();
@@ -11911,6 +11390,12 @@ public static class fixedValueAppliedStruct implements routines.system.IPersista
 					return this.mb_ord;
 				}
 				
+			    public Object inf_id;
+
+				public Object getInf_id () {
+					return this.inf_id;
+				}
+				
 
 
 	@Override
@@ -11958,6 +11443,7 @@ public static class fixedValueAppliedStruct implements routines.system.IPersista
 	            other.deceased = this.deceased;
 	            other.gender_mnemonic = this.gender_mnemonic;
 	            other.mb_ord = this.mb_ord;
+	            other.inf_id = this.inf_id;
 	            
 	}
 
@@ -12049,6 +11535,8 @@ public static class fixedValueAppliedStruct implements routines.system.IPersista
 					
 						this.mb_ord = (BigDecimal) dis.readObject();
 					
+						this.inf_id = (Object) dis.readObject();
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
 
@@ -12110,6 +11598,10 @@ public static class fixedValueAppliedStruct implements routines.system.IPersista
 				
        			    	dos.writeObject(this.mb_ord);
 					
+					// Object
+				
+       			    	dos.writeObject(this.inf_id);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -12133,6 +11625,7 @@ public static class fixedValueAppliedStruct implements routines.system.IPersista
 		sb.append(",deceased="+String.valueOf(deceased));
 		sb.append(",gender_mnemonic="+gender_mnemonic);
 		sb.append(",mb_ord="+String.valueOf(mb_ord));
+		sb.append(",inf_id="+String.valueOf(inf_id));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -12244,6 +11737,12 @@ public static class row20Struct implements routines.system.IPersistableRow<row20
 					return this.mb_ord;
 				}
 				
+			    public Object inf_id;
+
+				public Object getInf_id () {
+					return this.inf_id;
+				}
+				
 
 
 
@@ -12326,6 +11825,8 @@ public static class row20Struct implements routines.system.IPersistableRow<row20
 					
 						this.mb_ord = (BigDecimal) dis.readObject();
 					
+						this.inf_id = (Object) dis.readObject();
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
 
@@ -12387,6 +11888,10 @@ public static class row20Struct implements routines.system.IPersistableRow<row20
 				
        			    	dos.writeObject(this.mb_ord);
 					
+					// Object
+				
+       			    	dos.writeObject(this.inf_id);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -12410,6 +11915,7 @@ public static class row20Struct implements routines.system.IPersistableRow<row20
 		sb.append(",deceased="+String.valueOf(deceased));
 		sb.append(",gender_mnemonic="+gender_mnemonic);
 		sb.append(",mb_ord="+String.valueOf(mb_ord));
+		sb.append(",inf_id="+String.valueOf(inf_id));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -12523,6 +12029,12 @@ public static class row21Struct implements routines.system.IPersistableRow<row21
 					return this.mb_ord;
 				}
 				
+			    public Object inf_id;
+
+				public Object getInf_id () {
+					return this.inf_id;
+				}
+				
 			    public String errorMessage;
 
 				public String getErrorMessage () {
@@ -12576,6 +12088,7 @@ public static class row21Struct implements routines.system.IPersistableRow<row21
 	            other.deceased = this.deceased;
 	            other.gender_mnemonic = this.gender_mnemonic;
 	            other.mb_ord = this.mb_ord;
+	            other.inf_id = this.inf_id;
 	            other.errorMessage = this.errorMessage;
 	            
 	}
@@ -12668,6 +12181,8 @@ public static class row21Struct implements routines.system.IPersistableRow<row21
 					
 						this.mb_ord = (BigDecimal) dis.readObject();
 					
+						this.inf_id = (Object) dis.readObject();
+					
 					this.errorMessage = readString(dis);
 					
         	} catch (IOException e) {
@@ -12731,6 +12246,10 @@ public static class row21Struct implements routines.system.IPersistableRow<row21
 				
        			    	dos.writeObject(this.mb_ord);
 					
+					// Object
+				
+       			    	dos.writeObject(this.inf_id);
+					
 					// String
 				
 						writeString(this.errorMessage,dos);
@@ -12758,6 +12277,7 @@ public static class row21Struct implements routines.system.IPersistableRow<row21
 		sb.append(",deceased="+String.valueOf(deceased));
 		sb.append(",gender_mnemonic="+gender_mnemonic);
 		sb.append(",mb_ord="+String.valueOf(mb_ord));
+		sb.append(",inf_id="+String.valueOf(inf_id));
 		sb.append(",errorMessage="+errorMessage);
 	    sb.append("]");
 
@@ -12878,6 +12398,12 @@ public static class outputPatientsStruct implements routines.system.IPersistable
 					return this.mb_ord;
 				}
 				
+			    public Object inf_id;
+
+				public Object getInf_id () {
+					return this.inf_id;
+				}
+				
 
 
 	@Override
@@ -12925,6 +12451,7 @@ public static class outputPatientsStruct implements routines.system.IPersistable
 	            other.deceased = this.deceased;
 	            other.gender_mnemonic = this.gender_mnemonic;
 	            other.mb_ord = this.mb_ord;
+	            other.inf_id = this.inf_id;
 	            
 	}
 
@@ -13016,6 +12543,8 @@ public static class outputPatientsStruct implements routines.system.IPersistable
 					
 						this.mb_ord = (BigDecimal) dis.readObject();
 					
+						this.inf_id = (Object) dis.readObject();
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
 
@@ -13077,6 +12606,10 @@ public static class outputPatientsStruct implements routines.system.IPersistable
 				
        			    	dos.writeObject(this.mb_ord);
 					
+					// Object
+				
+       			    	dos.writeObject(this.inf_id);
+					
         	} catch (IOException e) {
 	            throw new RuntimeException(e);
         }
@@ -13100,6 +12633,7 @@ public static class outputPatientsStruct implements routines.system.IPersistable
 		sb.append(",deceased="+String.valueOf(deceased));
 		sb.append(",gender_mnemonic="+gender_mnemonic);
 		sb.append(",mb_ord="+String.valueOf(mb_ord));
+		sb.append(",inf_id="+String.valueOf(inf_id));
 	    sb.append("]");
 
 	    return sb.toString();
@@ -13167,6 +12701,12 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 
 				public String getGndr_cs () {
 					return this.gndr_cs;
+				}
+				
+			    public Object inf_id;
+
+				public Object getInf_id () {
+					return this.inf_id;
 				}
 				
 			    public Object nok_id;
@@ -13273,6 +12813,8 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					
 					this.gndr_cs = readString(dis);
 					
+						this.inf_id = (Object) dis.readObject();
+					
 						this.nok_id = (Object) dis.readObject();
 					
 					this.nok_typ = readString(dis);
@@ -13320,6 +12862,10 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 					
 					// Object
 				
+       			    	dos.writeObject(this.inf_id);
+					
+					// Object
+				
        			    	dos.writeObject(this.nok_id);
 					
 					// String
@@ -13358,6 +12904,7 @@ public static class row1Struct implements routines.system.IPersistableRow<row1St
 		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",dcsd_utc="+String.valueOf(dcsd_utc));
 		sb.append(",gndr_cs="+gndr_cs);
+		sb.append(",inf_id="+String.valueOf(inf_id));
 		sb.append(",nok_id="+String.valueOf(nok_id));
 		sb.append(",nok_typ="+nok_typ);
 		sb.append(",mth_id="+String.valueOf(mth_id));
@@ -13506,7 +13053,7 @@ String dbUser_tPostgresqlOutput_1 = null;
    int batchSizeCounter_tPostgresqlOutput_1=0;
 
 int count_tPostgresqlOutput_1=0;
-	    String insert_tPostgresqlOutput_1 = "INSERT INTO \"" + tableName_tPostgresqlOutput_1 + "\" (\"mb_ord\",\"pat_id\",\"psn_id\",\"mth_id\",\"nok_id\",\"nok_typ_mnemonic\",\"reg_fac_id\",\"asgn_fac_id\",\"deceased\",\"gender_mnemonic\") VALUES (?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tPostgresqlOutput_1 = "INSERT INTO \"" + tableName_tPostgresqlOutput_1 + "\" (\"pat_id\",\"psn_id\",\"mth_id\",\"nok_id\",\"nok_typ_mnemonic\",\"reg_fac_id\",\"asgn_fac_id\",\"deceased\",\"gender_mnemonic\",\"mb_ord\",\"inf_id\") VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_1 = conn_tPostgresqlOutput_1.prepareStatement(insert_tPostgresqlOutput_1);
 	    resourceMap.put("pstmt_tPostgresqlOutput_1", pstmt_tPostgresqlOutput_1);
@@ -13663,7 +13210,7 @@ String dbUser_tDBOutput_1 = null;
    int batchSizeCounter_tDBOutput_1=0;
 
 int count_tDBOutput_1=0;
-	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"pat_id\",\"psn_id\",\"mth_id\",\"nok_id\",\"nok_typ_mnemonic\",\"reg_fac_id\",\"asgn_fac_id\",\"deceased\",\"gender_mnemonic\",\"mb_ord\") VALUES (?,?,?,?,?,?,?,?,?,?)";
+	    String insert_tDBOutput_1 = "INSERT INTO \"" + tableName_tDBOutput_1 + "\" (\"inf_id\",\"pat_id\",\"psn_id\",\"mth_id\",\"nok_id\",\"nok_typ_mnemonic\",\"reg_fac_id\",\"asgn_fac_id\",\"deceased\",\"gender_mnemonic\",\"mb_ord\") VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 	    
 	    java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1.prepareStatement(insert_tDBOutput_1);
 	    resourceMap.put("pstmt_tDBOutput_1", pstmt_tDBOutput_1);
@@ -13863,16 +13410,20 @@ outputPatientsStruct outputPatients_tmp = new outputPatientsStruct();
 +"nic from ent_rel_tbl inner join cd_set_mem_vw on (ent_rel_tbl.rel_typ_cd_id = cd_set_mem_vw.cd_id) inner join ent_tbl on"
 +" (ent_tbl.ent_id = ent_rel_tbl.src_ent_id) where ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-37457962804d' and rel_typ_"
 +"cd_id != '29ff64e5-b564-411a-92c7-6818c02a9e48' and obslt_vrsn_seq_id is null and set_mnemonic = 'ChildFamilyMember'\n),"
-+"\nsdl as (\n	select src_ent_id as ent_id, trg_ent_id from ent_rel_tbl inner join ent_tbl on (ent_tbl.ent_id = ent_rel_tb"
-+"l.src_ent_id) where ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-37457962804d' and rel_typ_cd_id = '455f1772-f580-47e8-8"
-+"6bd-b5ce25d351f9' and obslt_vrsn_seq_id is null \n),\nregdl as (\n	select src_ent_id as ent_id, trg_ent_id from ent_rel_"
-+"tbl inner join ent_tbl on (ent_tbl.ent_id = ent_rel_tbl.src_ent_id) where ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-3"
-+"7457962804d' and rel_typ_cd_id = 'ff34dfa7-c6d3-4f8b-bc9f-14bcdc13ba6c' and obslt_vrsn_seq_id is null \n)\nselect pat_cu"
-+"r_vrsn_vw.ent_id, MAX(dcsd_utc) AS dcsd_utc, FIRST(gndr_cs) AS gndr_cs, FIRST(nok.trg_ent_id) as nok_id, FIRST(nok.cd_mn"
-+"emonic) as nok_typ, FIRST(mother.trg_ent_id) as mth_id, FIRST(sdl.trg_ent_id) as fac_id, FIRST(regdl.trg_ent_id) as reg_"
-+"id, FIRST(mb_ord) AS mb_ord\n	from pat_cur_vrsn_vw\n	natural left join sdl\n	left join mother on(pat_cur_vrsn_vw.ent_id "
-+"= mother.ent_id)\n	left join nok on(pat_cur_vrsn_vw.ent_id = nok.ent_id)\n	left join regdl on (regdl.ent_id = pat_cur_vr"
-+"sn_vw.ent_id)\nGROUP BY pat_cur_vrsn_vw.ent_id";
++"\ninf as (\n	select src_ent_id as ent_id, trg_ent_id from ent_rel_tbl inner join ent_tbl on (ent_tbl.ent_id = ent_rel_tb"
++"l.src_ent_id) where ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-37457962804d' and rel_typ_cd_id = 'b1d2148d-bb35-4337-8"
++"fe6-021f5a3ac8a3' and obslt_vrsn_seq_id is null\n),\nsdl as (\n	select src_ent_id as ent_id, trg_ent_id from ent_rel_tbl"
++" inner join ent_tbl on (ent_tbl.ent_id = ent_rel_tbl.src_ent_id) where ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-3745"
++"7962804d' and rel_typ_cd_id = '455f1772-f580-47e8-86bd-b5ce25d351f9' and obslt_vrsn_seq_id is null \n),\nregdl as (\n	se"
++"lect src_ent_id as ent_id, trg_ent_id from ent_rel_tbl inner join ent_tbl on (ent_tbl.ent_id = ent_rel_tbl.src_ent_id) w"
++"here ent_tbl.cls_cd_id = 'bacd9c6f-3fa9-481e-9636-37457962804d' and rel_typ_cd_id = 'ff34dfa7-c6d3-4f8b-bc9f-14bcdc13ba6"
++"c' and obslt_vrsn_seq_id is null \n)\nselect pat_cur_vrsn_vw.ent_id, MAX(dcsd_utc) AS dcsd_utc, FIRST(gndr_cs) AS gndr_c"
++"s, FIRST(inf.trg_ent_id) as inf_id, FIRST(nok.trg_ent_id) as nok_id, FIRST(nok.cd_mnemonic) as nok_typ, FIRST(mother.trg"
++"_ent_id) as mth_id, FIRST(sdl.trg_ent_id) as fac_id, FIRST(regdl.trg_ent_id) as reg_id, FIRST(mb_ord) AS mb_ord\n	from p"
++"at_cur_vrsn_vw\n	natural left join sdl\n	left join mother on(pat_cur_vrsn_vw.ent_id = mother.ent_id)\n	left join nok on("
++"pat_cur_vrsn_vw.ent_id = nok.ent_id)\n	left join inf on (pat_cur_vrsn_vw.ent_id = inf.ent_id)\n	left join regdl on (regd"
++"l.ent_id = pat_cur_vrsn_vw.ent_id)\nWHERE pat_cur_vrsn_vw.sts_cd_id IN ('c8064cbd-fa06-4530-b430-1a52f1530c27',\n'c34fcb"
++"f1-e0fe-4989-90fd-0dc49e1b9685')\nGROUP BY pat_cur_vrsn_vw.ent_id";
 			
 
             	globalMap.put("tPostgresqlInput_1_QUERY",dbquery_tPostgresqlInput_1);
@@ -13912,57 +13463,67 @@ outputPatientsStruct outputPatients_tmp = new outputPatientsStruct();
         	row1.gndr_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 3, false);
 		                    }
 							if(colQtyInRs_tPostgresqlInput_1 < 4) {
-								row1.nok_id = null;
+								row1.inf_id = null;
 							} else {
 		                          
             if(rs_tPostgresqlInput_1.getObject(4) != null) {
-                row1.nok_id = rs_tPostgresqlInput_1.getObject(4);
+                row1.inf_id = rs_tPostgresqlInput_1.getObject(4);
+            } else {
+                    row1.inf_id = null;
+            }
+		                    }
+							if(colQtyInRs_tPostgresqlInput_1 < 5) {
+								row1.nok_id = null;
+							} else {
+		                          
+            if(rs_tPostgresqlInput_1.getObject(5) != null) {
+                row1.nok_id = rs_tPostgresqlInput_1.getObject(5);
             } else {
                     row1.nok_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 5) {
+							if(colQtyInRs_tPostgresqlInput_1 < 6) {
 								row1.nok_typ = null;
 							} else {
 	                         		
-        	row1.nok_typ = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 5, false);
+        	row1.nok_typ = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_1, 6, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 6) {
+							if(colQtyInRs_tPostgresqlInput_1 < 7) {
 								row1.mth_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_1.getObject(6) != null) {
-                row1.mth_id = rs_tPostgresqlInput_1.getObject(6);
+            if(rs_tPostgresqlInput_1.getObject(7) != null) {
+                row1.mth_id = rs_tPostgresqlInput_1.getObject(7);
             } else {
                     row1.mth_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 7) {
+							if(colQtyInRs_tPostgresqlInput_1 < 8) {
 								row1.fac_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_1.getObject(7) != null) {
-                row1.fac_id = rs_tPostgresqlInput_1.getObject(7);
+            if(rs_tPostgresqlInput_1.getObject(8) != null) {
+                row1.fac_id = rs_tPostgresqlInput_1.getObject(8);
             } else {
                     row1.fac_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 8) {
+							if(colQtyInRs_tPostgresqlInput_1 < 9) {
 								row1.reg_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_1.getObject(8) != null) {
-                row1.reg_id = rs_tPostgresqlInput_1.getObject(8);
+            if(rs_tPostgresqlInput_1.getObject(9) != null) {
+                row1.reg_id = rs_tPostgresqlInput_1.getObject(9);
             } else {
                     row1.reg_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_1 < 9) {
+							if(colQtyInRs_tPostgresqlInput_1 < 10) {
 								row1.mb_ord = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_1.getObject(9) != null) {
-                row1.mb_ord = rs_tPostgresqlInput_1.getBigDecimal(9);
+            if(rs_tPostgresqlInput_1.getObject(10) != null) {
+                row1.mb_ord = rs_tPostgresqlInput_1.getBigDecimal(10);
             } else {
                     row1.mb_ord = null;
             }
@@ -14077,6 +13638,7 @@ outputPatients_tmp.asgn_fac_id = row1.fac_id ;
 outputPatients_tmp.deceased = row1.dcsd_utc ;
 outputPatients_tmp.gender_mnemonic = row1.gndr_cs ;
 outputPatients_tmp.mb_ord = row1.mb_ord ;
+outputPatients_tmp.inf_id = row1.inf_id ;
 outputPatients = outputPatients_tmp;
 // ###############################
 
@@ -14170,7 +13732,8 @@ if(outputPatients != null) {
                row20.asgn_fac_id = outputPatients.asgn_fac_id;
                row20.deceased = outputPatients.deceased;
                row20.gender_mnemonic = outputPatients.gender_mnemonic;
-               row20.mb_ord = outputPatients.mb_ord;    
+               row20.mb_ord = outputPatients.mb_ord;
+               row20.inf_id = outputPatients.inf_id;    
       nb_line_ok_tFilterRow_2++;
     } else {
             if (row21 == null){
@@ -14186,6 +13749,7 @@ if(outputPatients != null) {
                 row21.deceased = outputPatients.deceased;
                 row21.gender_mnemonic = outputPatients.gender_mnemonic;
                 row21.mb_ord = outputPatients.mb_ord;
+                row21.inf_id = outputPatients.inf_id;
 	            row21.errorMessage = ope_tFilterRow_2.getErrorMsg();
       nb_line_reject_tFilterRow_2++;
     }
@@ -14283,6 +13847,7 @@ fixedValueApplied_tmp.asgn_fac_id = "6130e1ce-3ed1-467f-8c33-2f96e47674f7";
 fixedValueApplied_tmp.deceased = row20.deceased;
 fixedValueApplied_tmp.gender_mnemonic = row20.gender_mnemonic;
 fixedValueApplied_tmp.mb_ord = row20.mb_ord ;
+fixedValueApplied_tmp.inf_id = null;
 fixedValueApplied = fixedValueApplied_tmp;
 // ###############################
 
@@ -14360,52 +13925,57 @@ if(fixedValueApplied != null) {
 
 
         whetherReject_tPostgresqlOutput_1 = false;
-                    pstmt_tPostgresqlOutput_1.setBigDecimal(1, fixedValueApplied.mb_ord);
-
                     if(fixedValueApplied.pat_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(2, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(2, fixedValueApplied.pat_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(1, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(1, fixedValueApplied.pat_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.psn_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(3, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(3, fixedValueApplied.psn_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(2, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(2, fixedValueApplied.psn_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.mth_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(4, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(4, fixedValueApplied.mth_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(3, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(3, fixedValueApplied.mth_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.nok_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(5, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(5, fixedValueApplied.nok_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(4, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(4, fixedValueApplied.nok_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.nok_typ_mnemonic == null) {
-pstmt_tPostgresqlOutput_1.setNull(6, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_1.setString(6, fixedValueApplied.nok_typ_mnemonic);
+pstmt_tPostgresqlOutput_1.setNull(5, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_1.setString(5, fixedValueApplied.nok_typ_mnemonic);
 }
 
                     if(fixedValueApplied.reg_fac_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(7, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(7, fixedValueApplied.reg_fac_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(6, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(6, fixedValueApplied.reg_fac_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.asgn_fac_id == null) {
-pstmt_tPostgresqlOutput_1.setNull(8, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_1.setObject(8, fixedValueApplied.asgn_fac_id, java.sql.Types.OTHER);
+pstmt_tPostgresqlOutput_1.setNull(7, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(7, fixedValueApplied.asgn_fac_id, java.sql.Types.OTHER);
 }
 
                     if(fixedValueApplied.deceased != null) {
-pstmt_tPostgresqlOutput_1.setTimestamp(9, new java.sql.Timestamp(fixedValueApplied.deceased.getTime()));
+pstmt_tPostgresqlOutput_1.setTimestamp(8, new java.sql.Timestamp(fixedValueApplied.deceased.getTime()));
 } else {
-pstmt_tPostgresqlOutput_1.setNull(9, java.sql.Types.TIMESTAMP);
+pstmt_tPostgresqlOutput_1.setNull(8, java.sql.Types.TIMESTAMP);
 }
 
                     if(fixedValueApplied.gender_mnemonic == null) {
-pstmt_tPostgresqlOutput_1.setNull(10, java.sql.Types.VARCHAR);
-} else {pstmt_tPostgresqlOutput_1.setString(10, fixedValueApplied.gender_mnemonic);
+pstmt_tPostgresqlOutput_1.setNull(9, java.sql.Types.VARCHAR);
+} else {pstmt_tPostgresqlOutput_1.setString(9, fixedValueApplied.gender_mnemonic);
+}
+
+                    pstmt_tPostgresqlOutput_1.setBigDecimal(10, fixedValueApplied.mb_ord);
+
+                    if(fixedValueApplied.inf_id == null) {
+pstmt_tPostgresqlOutput_1.setNull(11, java.sql.Types.OTHER);
+} else {pstmt_tPostgresqlOutput_1.setObject(11, fixedValueApplied.inf_id);
 }
 
 			
@@ -14564,53 +14134,58 @@ if(row21 != null) {
 
 
         whetherReject_tDBOutput_1 = false;
-                    if(row21.pat_id == null) {
+                    if(row21.inf_id == null) {
 pstmt_tDBOutput_1.setNull(1, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(1, row21.pat_id, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(1, row21.inf_id);
+}
+
+                    if(row21.pat_id == null) {
+pstmt_tDBOutput_1.setNull(2, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(2, row21.pat_id, java.sql.Types.OTHER);
 }
 
                     if(row21.psn_id == null) {
-pstmt_tDBOutput_1.setNull(2, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(2, row21.psn_id, java.sql.Types.OTHER);
+pstmt_tDBOutput_1.setNull(3, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(3, row21.psn_id, java.sql.Types.OTHER);
 }
 
                     if(row21.mth_id == null) {
-pstmt_tDBOutput_1.setNull(3, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(3, row21.mth_id, java.sql.Types.OTHER);
+pstmt_tDBOutput_1.setNull(4, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(4, row21.mth_id, java.sql.Types.OTHER);
 }
 
                     if(row21.nok_id == null) {
-pstmt_tDBOutput_1.setNull(4, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(4, row21.nok_id, java.sql.Types.OTHER);
+pstmt_tDBOutput_1.setNull(5, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(5, row21.nok_id, java.sql.Types.OTHER);
 }
 
                     if(row21.nok_typ_mnemonic == null) {
-pstmt_tDBOutput_1.setNull(5, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(5, row21.nok_typ_mnemonic);
+pstmt_tDBOutput_1.setNull(6, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(6, row21.nok_typ_mnemonic);
 }
 
                     if(row21.reg_fac_id == null) {
-pstmt_tDBOutput_1.setNull(6, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(6, row21.reg_fac_id, java.sql.Types.OTHER);
+pstmt_tDBOutput_1.setNull(7, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(7, row21.reg_fac_id, java.sql.Types.OTHER);
 }
 
                     if(row21.asgn_fac_id == null) {
-pstmt_tDBOutput_1.setNull(7, java.sql.Types.OTHER);
-} else {pstmt_tDBOutput_1.setObject(7, row21.asgn_fac_id, java.sql.Types.OTHER);
+pstmt_tDBOutput_1.setNull(8, java.sql.Types.OTHER);
+} else {pstmt_tDBOutput_1.setObject(8, row21.asgn_fac_id, java.sql.Types.OTHER);
 }
 
                     if(row21.deceased != null) {
-pstmt_tDBOutput_1.setTimestamp(8, new java.sql.Timestamp(row21.deceased.getTime()));
+pstmt_tDBOutput_1.setTimestamp(9, new java.sql.Timestamp(row21.deceased.getTime()));
 } else {
-pstmt_tDBOutput_1.setNull(8, java.sql.Types.TIMESTAMP);
+pstmt_tDBOutput_1.setNull(9, java.sql.Types.TIMESTAMP);
 }
 
                     if(row21.gender_mnemonic == null) {
-pstmt_tDBOutput_1.setNull(9, java.sql.Types.VARCHAR);
-} else {pstmt_tDBOutput_1.setString(9, row21.gender_mnemonic);
+pstmt_tDBOutput_1.setNull(10, java.sql.Types.VARCHAR);
+} else {pstmt_tDBOutput_1.setString(10, row21.gender_mnemonic);
 }
 
-                    pstmt_tDBOutput_1.setBigDecimal(10, row21.mb_ord);
+                    pstmt_tDBOutput_1.setBigDecimal(11, row21.mb_ord);
 
 			
     		pstmt_tDBOutput_1.addBatch();
@@ -19745,58 +19320,10 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
     static byte[] commonByteArray_OPENIZ_Warehouse_Patients = new byte[0];
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public Double vrsn_seq_id;
-
-				public Double getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -19805,46 +19332,16 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
-
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
-				}
-				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
 				}
 				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
 			    public String sts_cs;
 
 				public String getSts_cs () {
 					return this.sts_cs;
-				}
-				
-			    public Boolean mob_ind;
-
-				public Boolean getMob_ind () {
-					return this.mob_ind;
-				}
-				
-			    public Double lat;
-
-				public Double getLat () {
-					return this.lat;
-				}
-				
-			    public Double lng;
-
-				public Double getLng () {
-					return this.lng;
 				}
 				
 			    public Object parent_id;
@@ -19933,59 +19430,13 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.vrsn_seq_id = null;
-           				} else {
-           			    	this.vrsn_seq_id = dis.readDouble();
-           				}
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
-					
 					this.obslt_utc = readDate(dis);
 					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
 					this.sts_cs = readString(dis);
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.mob_ind = null;
-           				} else {
-           			    	this.mob_ind = dis.readBoolean();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lat = null;
-           				} else {
-           			    	this.lat = dis.readDouble();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lng = null;
-           				} else {
-           			    	this.lng = dis.readDouble();
-           				}
 					
 						this.parent_id = (Object) dis.readObject();
 					
@@ -20018,91 +19469,19 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// Double
-				
-						if(this.vrsn_seq_id == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.vrsn_seq_id);
-		            	}
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.crt_usr_id);
-					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
 					// String
 				
 						writeString(this.sts_cs,dos);
-					
-					// Boolean
-				
-						if(this.mob_ind == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeBoolean(this.mob_ind);
-		            	}
-					
-					// Double
-				
-						if(this.lat == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lat);
-		            	}
-					
-					// Double
-				
-						if(this.lng == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lng);
-		            	}
 					
 					// Object
 				
@@ -20133,23 +19512,10 @@ public static class row6Struct implements routines.system.IPersistableRow<row6St
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
 		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
 		sb.append(",sts_cs="+sts_cs);
-		sb.append(",mob_ind="+String.valueOf(mob_ind));
-		sb.append(",lat="+String.valueOf(lat));
-		sb.append(",lng="+String.valueOf(lng));
 		sb.append(",parent_id="+String.valueOf(parent_id));
 		sb.append(",type_mnemonic="+type_mnemonic);
 		sb.append(",tel_val="+tel_val);
@@ -20199,58 +19565,10 @@ public static class after_tPostgresqlInput_6Struct implements routines.system.IP
     static byte[] commonByteArray_OPENIZ_Warehouse_Patients = new byte[0];
 
 	
-			    public Object ent_vrsn_id;
-
-				public Object getEnt_vrsn_id () {
-					return this.ent_vrsn_id;
-				}
-				
-			    public Object cls_cd_id;
-
-				public Object getCls_cd_id () {
-					return this.cls_cd_id;
-				}
-				
-			    public Object dtr_cd_id;
-
-				public Object getDtr_cd_id () {
-					return this.dtr_cd_id;
-				}
-				
-			    public Object tpl_id;
-
-				public Object getTpl_id () {
-					return this.tpl_id;
-				}
-				
-			    public Double vrsn_seq_id;
-
-				public Double getVrsn_seq_id () {
-					return this.vrsn_seq_id;
-				}
-				
 			    public Object ent_id;
 
 				public Object getEnt_id () {
 					return this.ent_id;
-				}
-				
-			    public Object rplc_vrsn_id;
-
-				public Object getRplc_vrsn_id () {
-					return this.rplc_vrsn_id;
-				}
-				
-			    public Object sts_cd_id;
-
-				public Object getSts_cd_id () {
-					return this.sts_cd_id;
-				}
-				
-			    public Object typ_cd_id;
-
-				public Object getTyp_cd_id () {
-					return this.typ_cd_id;
 				}
 				
 			    public java.util.Date crt_utc;
@@ -20259,46 +19577,16 @@ public static class after_tPostgresqlInput_6Struct implements routines.system.IP
 					return this.crt_utc;
 				}
 				
-			    public Object crt_usr_id;
-
-				public Object getCrt_usr_id () {
-					return this.crt_usr_id;
-				}
-				
 			    public java.util.Date obslt_utc;
 
 				public java.util.Date getObslt_utc () {
 					return this.obslt_utc;
 				}
 				
-			    public Object obslt_usr_id;
-
-				public Object getObslt_usr_id () {
-					return this.obslt_usr_id;
-				}
-				
 			    public String sts_cs;
 
 				public String getSts_cs () {
 					return this.sts_cs;
-				}
-				
-			    public Boolean mob_ind;
-
-				public Boolean getMob_ind () {
-					return this.mob_ind;
-				}
-				
-			    public Double lat;
-
-				public Double getLat () {
-					return this.lat;
-				}
-				
-			    public Double lng;
-
-				public Double getLng () {
-					return this.lng;
 				}
 				
 			    public Object parent_id;
@@ -20387,59 +19675,13 @@ public static class after_tPostgresqlInput_6Struct implements routines.system.IP
 
         		int length = 0;
 		
-						this.ent_vrsn_id = (Object) dis.readObject();
-					
-						this.cls_cd_id = (Object) dis.readObject();
-					
-						this.dtr_cd_id = (Object) dis.readObject();
-					
-						this.tpl_id = (Object) dis.readObject();
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.vrsn_seq_id = null;
-           				} else {
-           			    	this.vrsn_seq_id = dis.readDouble();
-           				}
-					
 						this.ent_id = (Object) dis.readObject();
-					
-						this.rplc_vrsn_id = (Object) dis.readObject();
-					
-						this.sts_cd_id = (Object) dis.readObject();
-					
-						this.typ_cd_id = (Object) dis.readObject();
 					
 					this.crt_utc = readDate(dis);
 					
-						this.crt_usr_id = (Object) dis.readObject();
-					
 					this.obslt_utc = readDate(dis);
 					
-						this.obslt_usr_id = (Object) dis.readObject();
-					
 					this.sts_cs = readString(dis);
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.mob_ind = null;
-           				} else {
-           			    	this.mob_ind = dis.readBoolean();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lat = null;
-           				} else {
-           			    	this.lat = dis.readDouble();
-           				}
-					
-			            length = dis.readByte();
-           				if (length == -1) {
-           	    			this.lng = null;
-           				} else {
-           			    	this.lng = dis.readDouble();
-           				}
 					
 						this.parent_id = (Object) dis.readObject();
 					
@@ -20472,91 +19714,19 @@ public static class after_tPostgresqlInput_6Struct implements routines.system.IP
 		
 					// Object
 				
-       			    	dos.writeObject(this.ent_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.cls_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.dtr_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.tpl_id);
-					
-					// Double
-				
-						if(this.vrsn_seq_id == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.vrsn_seq_id);
-		            	}
-					
-					// Object
-				
        			    	dos.writeObject(this.ent_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.rplc_vrsn_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.sts_cd_id);
-					
-					// Object
-				
-       			    	dos.writeObject(this.typ_cd_id);
 					
 					// java.util.Date
 				
 						writeDate(this.crt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.crt_usr_id);
-					
 					// java.util.Date
 				
 						writeDate(this.obslt_utc,dos);
 					
-					// Object
-				
-       			    	dos.writeObject(this.obslt_usr_id);
-					
 					// String
 				
 						writeString(this.sts_cs,dos);
-					
-					// Boolean
-				
-						if(this.mob_ind == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeBoolean(this.mob_ind);
-		            	}
-					
-					// Double
-				
-						if(this.lat == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lat);
-		            	}
-					
-					// Double
-				
-						if(this.lng == null) {
-			                dos.writeByte(-1);
-						} else {
-               				dos.writeByte(0);
-           			    	dos.writeDouble(this.lng);
-		            	}
 					
 					// Object
 				
@@ -20587,23 +19757,10 @@ public static class after_tPostgresqlInput_6Struct implements routines.system.IP
 		StringBuilder sb = new StringBuilder();
 		sb.append(super.toString());
 		sb.append("[");
-		sb.append("ent_vrsn_id="+String.valueOf(ent_vrsn_id));
-		sb.append(",cls_cd_id="+String.valueOf(cls_cd_id));
-		sb.append(",dtr_cd_id="+String.valueOf(dtr_cd_id));
-		sb.append(",tpl_id="+String.valueOf(tpl_id));
-		sb.append(",vrsn_seq_id="+String.valueOf(vrsn_seq_id));
-		sb.append(",ent_id="+String.valueOf(ent_id));
-		sb.append(",rplc_vrsn_id="+String.valueOf(rplc_vrsn_id));
-		sb.append(",sts_cd_id="+String.valueOf(sts_cd_id));
-		sb.append(",typ_cd_id="+String.valueOf(typ_cd_id));
+		sb.append("ent_id="+String.valueOf(ent_id));
 		sb.append(",crt_utc="+String.valueOf(crt_utc));
-		sb.append(",crt_usr_id="+String.valueOf(crt_usr_id));
 		sb.append(",obslt_utc="+String.valueOf(obslt_utc));
-		sb.append(",obslt_usr_id="+String.valueOf(obslt_usr_id));
 		sb.append(",sts_cs="+sts_cs);
-		sb.append(",mob_ind="+String.valueOf(mob_ind));
-		sb.append(",lat="+String.valueOf(lat));
-		sb.append(",lng="+String.valueOf(lng));
 		sb.append(",parent_id="+String.valueOf(parent_id));
 		sb.append(",type_mnemonic="+type_mnemonic);
 		sb.append(",tel_val="+tel_val);
@@ -20750,14 +19907,12 @@ String dbUser_tPostgresqlOutput_5 = null;
 
 
 int count_tPostgresqlOutput_5=0;
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_5 = conn_tPostgresqlOutput_5.prepareStatement("SELECT COUNT(1) FROM \"" + tableName_tPostgresqlOutput_5 + "\" WHERE \"plc_id\" = ?");
-	    resourceMap.put("pstmt_tPostgresqlOutput_5", pstmt_tPostgresqlOutput_5);
-	    String insert_tPostgresqlOutput_5 = "INSERT INTO \"" + tableName_tPostgresqlOutput_5 + "\" (\"plc_id\",\"crt_etl_id\",\"upd_etl_id\",\"crt_utc\",\"upd_utc\",\"obslt_utc\",\"sts_cs\",\"type_mnemonic\",\"parent_id\") VALUES (?,?,?,?,?,?,?,?,?)";
-	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_5 = conn_tPostgresqlOutput_5.prepareStatement(insert_tPostgresqlOutput_5);
-	    resourceMap.put("pstmtInsert_tPostgresqlOutput_5", pstmtInsert_tPostgresqlOutput_5);
 	    String update_tPostgresqlOutput_5 = "UPDATE \"" + tableName_tPostgresqlOutput_5 + "\" SET \"crt_etl_id\" = ?,\"upd_etl_id\" = ?,\"crt_utc\" = ?,\"upd_utc\" = ?,\"obslt_utc\" = ?,\"sts_cs\" = ?,\"type_mnemonic\" = ?,\"parent_id\" = ? WHERE \"plc_id\" = ?";
 	    java.sql.PreparedStatement pstmtUpdate_tPostgresqlOutput_5 = conn_tPostgresqlOutput_5.prepareStatement(update_tPostgresqlOutput_5);
 	    resourceMap.put("pstmtUpdate_tPostgresqlOutput_5", pstmtUpdate_tPostgresqlOutput_5);
+	    String insert_tPostgresqlOutput_5 = "INSERT INTO \"" + tableName_tPostgresqlOutput_5 + "\" (\"plc_id\",\"crt_etl_id\",\"upd_etl_id\",\"crt_utc\",\"upd_utc\",\"obslt_utc\",\"sts_cs\",\"type_mnemonic\",\"parent_id\") VALUES (?,?,?,?,?,?,?,?,?)";
+	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_5 = conn_tPostgresqlOutput_5.prepareStatement(insert_tPostgresqlOutput_5);
+	    resourceMap.put("pstmtInsert_tPostgresqlOutput_5", pstmtInsert_tPostgresqlOutput_5);
 	    
 
  
@@ -20842,14 +19997,12 @@ String dbUser_tPostgresqlOutput_6 = null;
 
 
 int count_tPostgresqlOutput_6=0;
-	    java.sql.PreparedStatement pstmt_tPostgresqlOutput_6 = conn_tPostgresqlOutput_6.prepareStatement("SELECT COUNT(1) FROM \"" + tableName_tPostgresqlOutput_6 + "\" WHERE \"fac_id\" = ? AND \"plc_id\" = ?");
-	    resourceMap.put("pstmt_tPostgresqlOutput_6", pstmt_tPostgresqlOutput_6);
-	    String insert_tPostgresqlOutput_6 = "INSERT INTO \"" + tableName_tPostgresqlOutput_6 + "\" (\"fac_id\",\"plc_id\",\"crt_etl_id\",\"upd_etl_id\",\"crt_utc\",\"upd_utc\",\"obslt_utc\") VALUES (?,?,?,?,?,?,?)";
-	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_6 = conn_tPostgresqlOutput_6.prepareStatement(insert_tPostgresqlOutput_6);
-	    resourceMap.put("pstmtInsert_tPostgresqlOutput_6", pstmtInsert_tPostgresqlOutput_6);
 	    String update_tPostgresqlOutput_6 = "UPDATE \"" + tableName_tPostgresqlOutput_6 + "\" SET \"crt_etl_id\" = ?,\"upd_etl_id\" = ?,\"crt_utc\" = ?,\"upd_utc\" = ?,\"obslt_utc\" = ? WHERE \"fac_id\" = ? AND \"plc_id\" = ?";
 	    java.sql.PreparedStatement pstmtUpdate_tPostgresqlOutput_6 = conn_tPostgresqlOutput_6.prepareStatement(update_tPostgresqlOutput_6);
 	    resourceMap.put("pstmtUpdate_tPostgresqlOutput_6", pstmtUpdate_tPostgresqlOutput_6);
+	    String insert_tPostgresqlOutput_6 = "INSERT INTO \"" + tableName_tPostgresqlOutput_6 + "\" (\"fac_id\",\"plc_id\",\"crt_etl_id\",\"upd_etl_id\",\"crt_utc\",\"upd_utc\",\"obslt_utc\") VALUES (?,?,?,?,?,?,?)";
+	    java.sql.PreparedStatement pstmtInsert_tPostgresqlOutput_6 = conn_tPostgresqlOutput_6.prepareStatement(insert_tPostgresqlOutput_6);
+	    resourceMap.put("pstmtInsert_tPostgresqlOutput_6", pstmtInsert_tPostgresqlOutput_6);
 	    
 
  
@@ -21053,14 +20206,16 @@ outputFacilityRelationsStruct outputFacilityRelations_tmp = new outputFacilityRe
 		    
 			java.sql.Statement stmt_tPostgresqlInput_6 = conn_tPostgresqlInput_6.createStatement();
 
-		    String dbquery_tPostgresqlInput_6 = "with parent_rel as (\n	select * from ent_rel_tbl where rel_typ_cd_id = 'bfcbb345-86db-43ba-b47e-e7411276ac7c' and obslt"
-+"_vrsn_seq_id is null\n), dedsdl as (\n	select * from ent_rel_tbl where rel_typ_cd_id = '455f1772-f580-47e8-86bd-b5ce25d3"
-+"51f9' and obslt_vrsn_seq_id is null\n)\nselect distinct plc_cur_vrsn_vw.*, parent.ent_id as parent_id, type.mnemonic as "
-+"type_mnemonic, tel.tel_val, dedsdl.trg_ent_id as facility from plc_cur_vrsn_vw \nleft join cd_cur_vrsn_vw as type on (ty"
-+"pe.cd_id = plc_cur_vrsn_vw.typ_cd_id)\nleft join parent_rel on (plc_cur_vrsn_vw.ent_id = parent_rel.src_ent_id) \nleft j"
-+"oin plc_cur_vrsn_vw as parent on (parent_rel.trg_ent_id = parent.ent_id)\nleft join ent_cur_tel_vw as tel on (tel.ent_id"
-+" = plc_cur_vrsn_vw.ent_id)\nleft join dedsdl on (plc_cur_vrsn_vw.ent_id = dedsdl.src_ent_id)\nwhere\nplc_cur_vrsn_vw.cls"
-+"_cd_id != 'ff34dfa7-c6d3-4f8b-bc9f-14bcdc13ba6c'\norder by vrsn_seq_id";
+		    String dbquery_tPostgresqlInput_6 = "\nselect distinct vil.ent_id, vil.crt_utc, vil.obslt_utc, sts.mnemonic, parent_rel.trg_ent_id as parent_id, type.mnemon"
++"ic as type_mnemonic, null as tel_val, dedsdl.trg_ent_id as facility \nfrom  \nent_vrsn_tbl vil \ninner join ent_tbl usin"
++"g (ent_id)\ninner join cd_vrsn_tbl sts on (sts.cd_id = vil.sts_cd_id and sts.obslt_utc is null)\ninner join cd_vrsn_tbl "
++"as type on (type.cd_id = vil.typ_cd_id and type.obslt_utc is null)\nleft join ent_rel_tbl parent_rel on (vil.ent_id = pa"
++"rent_rel.src_ent_id and parent_rel.rel_typ_cd_id = 'bfcbb345-86db-43ba-b47e-e7411276ac7c' and parent_rel.obslt_vrsn_seq_"
++"id is null) \nleft join ent_rel_tbl dedsdl on (vil.ent_id = dedsdl.src_ent_id and dedsdl.rel_typ_cd_id = '455f1772-f580-"
++"47e8-86bd-b5ce25d351f9' and dedsdl.obslt_vrsn_seq_id is null)\nwhere ent_tbl.cls_cd_id in (\n	'21ab7873-8ef3-4d78-9c19-4"
++"582b3c40631',\n	'48b2ffb3-07db-47ba-ad73-fc8fb8502471',\n	'4d1a5c28-deb7-411e-b75f-d524f90dfa63',\n	'6eefee7d-dff5-46d3-"
++"a6a7-171ef93879c7',\n	'79dd4f75-68e8-4722-a7f5-8bc2e08f5cd6',\n	'74cd3296-cb58-4984-9750-d077a130ce05',\n	'8cf4b0b0-84e5"
++"-4122-85fe-6afa8240c218',\n	'd9489d56-ddac-4596-b5c6-8f41d73d8dc5'\n	)\n	--group by vil.ent_id\n";
 			
 
             	globalMap.put("tPostgresqlInput_6_QUERY",dbquery_tPostgresqlInput_6);
@@ -21078,191 +20233,61 @@ outputFacilityRelationsStruct outputFacilityRelations_tmp = new outputFacilityRe
 		        nb_line_tPostgresqlInput_6++;
 		        
 							if(colQtyInRs_tPostgresqlInput_6 < 1) {
-								row6.ent_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(1) != null) {
-                row6.ent_vrsn_id = rs_tPostgresqlInput_6.getObject(1);
-            } else {
-                    row6.ent_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 2) {
-								row6.cls_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(2) != null) {
-                row6.cls_cd_id = rs_tPostgresqlInput_6.getObject(2);
-            } else {
-                    row6.cls_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 3) {
-								row6.dtr_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(3) != null) {
-                row6.dtr_cd_id = rs_tPostgresqlInput_6.getObject(3);
-            } else {
-                    row6.dtr_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 4) {
-								row6.tpl_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(4) != null) {
-                row6.tpl_id = rs_tPostgresqlInput_6.getObject(4);
-            } else {
-                    row6.tpl_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 5) {
-								row6.vrsn_seq_id = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_6.getObject(5) != null) {
-                row6.vrsn_seq_id = rs_tPostgresqlInput_6.getDouble(5);
-            } else {
-                    row6.vrsn_seq_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 6) {
 								row6.ent_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_6.getObject(6) != null) {
-                row6.ent_id = rs_tPostgresqlInput_6.getObject(6);
+            if(rs_tPostgresqlInput_6.getObject(1) != null) {
+                row6.ent_id = rs_tPostgresqlInput_6.getObject(1);
             } else {
-                    row6.ent_id = null;
+                    throw new RuntimeException("Null value in non-Nullable column");
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 7) {
-								row6.rplc_vrsn_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(7) != null) {
-                row6.rplc_vrsn_id = rs_tPostgresqlInput_6.getObject(7);
-            } else {
-                    row6.rplc_vrsn_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 8) {
-								row6.sts_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(8) != null) {
-                row6.sts_cd_id = rs_tPostgresqlInput_6.getObject(8);
-            } else {
-                    row6.sts_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 9) {
-								row6.typ_cd_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(9) != null) {
-                row6.typ_cd_id = rs_tPostgresqlInput_6.getObject(9);
-            } else {
-                    row6.typ_cd_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 10) {
+							if(colQtyInRs_tPostgresqlInput_6 < 2) {
 								row6.crt_utc = null;
 							} else {
 										
-			row6.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_6, 10);
+			row6.crt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_6, 2);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 11) {
-								row6.crt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(11) != null) {
-                row6.crt_usr_id = rs_tPostgresqlInput_6.getObject(11);
-            } else {
-                    row6.crt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 12) {
+							if(colQtyInRs_tPostgresqlInput_6 < 3) {
 								row6.obslt_utc = null;
 							} else {
 										
-			row6.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_6, 12);
+			row6.obslt_utc = routines.system.JDBCUtil.getDate(rs_tPostgresqlInput_6, 3);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 13) {
-								row6.obslt_usr_id = null;
-							} else {
-		                          
-            if(rs_tPostgresqlInput_6.getObject(13) != null) {
-                row6.obslt_usr_id = rs_tPostgresqlInput_6.getObject(13);
-            } else {
-                    row6.obslt_usr_id = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 14) {
+							if(colQtyInRs_tPostgresqlInput_6 < 4) {
 								row6.sts_cs = null;
 							} else {
 	                         		
-        	row6.sts_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 14, false);
+        	row6.sts_cs = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 4, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 15) {
-								row6.mob_ind = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_6.getObject(15) != null) {
-                row6.mob_ind = rs_tPostgresqlInput_6.getBoolean(15);
-            } else {
-                    row6.mob_ind = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 16) {
-								row6.lat = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_6.getObject(16) != null) {
-                row6.lat = rs_tPostgresqlInput_6.getDouble(16);
-            } else {
-                    row6.lat = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 17) {
-								row6.lng = null;
-							} else {
-	                         		
-            if(rs_tPostgresqlInput_6.getObject(17) != null) {
-                row6.lng = rs_tPostgresqlInput_6.getDouble(17);
-            } else {
-                    row6.lng = null;
-            }
-		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 18) {
+							if(colQtyInRs_tPostgresqlInput_6 < 5) {
 								row6.parent_id = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_6.getObject(18) != null) {
-                row6.parent_id = rs_tPostgresqlInput_6.getObject(18);
+            if(rs_tPostgresqlInput_6.getObject(5) != null) {
+                row6.parent_id = rs_tPostgresqlInput_6.getObject(5);
             } else {
                     row6.parent_id = null;
             }
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 19) {
+							if(colQtyInRs_tPostgresqlInput_6 < 6) {
 								row6.type_mnemonic = null;
 							} else {
 	                         		
-        	row6.type_mnemonic = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 19, false);
+        	row6.type_mnemonic = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 6, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 20) {
+							if(colQtyInRs_tPostgresqlInput_6 < 7) {
 								row6.tel_val = null;
 							} else {
 	                         		
-        	row6.tel_val = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 20, false);
+        	row6.tel_val = routines.system.JDBCUtil.getString(rs_tPostgresqlInput_6, 7, false);
 		                    }
-							if(colQtyInRs_tPostgresqlInput_6 < 21) {
+							if(colQtyInRs_tPostgresqlInput_6 < 8) {
 								row6.facility = null;
 							} else {
 		                          
-            if(rs_tPostgresqlInput_6.getObject(21) != null) {
-                row6.facility = rs_tPostgresqlInput_6.getObject(21);
+            if(rs_tPostgresqlInput_6.getObject(8) != null) {
+                row6.facility = rs_tPostgresqlInput_6.getObject(8);
             } else {
                     row6.facility = null;
             }
@@ -21572,78 +20597,64 @@ if(outputVillages != null) {
 
 
         whetherReject_tPostgresqlOutput_5 = false;
-                    if(outputVillages.plc_id == null) {
-pstmt_tPostgresqlOutput_5.setNull(1, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_5.setObject(1, outputVillages.plc_id, java.sql.Types.OTHER);
-}
-
-            int checkCount_tPostgresqlOutput_5 = -1;
-            try (java.sql.ResultSet rs_tPostgresqlOutput_5 = pstmt_tPostgresqlOutput_5.executeQuery()) {
-                while(rs_tPostgresqlOutput_5.next()) {
-                    checkCount_tPostgresqlOutput_5 = rs_tPostgresqlOutput_5.getInt(1);
-                }
-            }
-            if(checkCount_tPostgresqlOutput_5 > 0) {
-                        if(outputVillages.crt_etl_id == null) {
+            int updateFlag_tPostgresqlOutput_5=0;
+                    if(outputVillages.crt_etl_id == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(1, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_5.setObject(1, outputVillages.crt_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(outputVillages.upd_etl_id == null) {
+                    if(outputVillages.upd_etl_id == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(2, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_5.setObject(2, outputVillages.upd_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(outputVillages.crt_utc != null) {
+                    if(outputVillages.crt_utc != null) {
 pstmtUpdate_tPostgresqlOutput_5.setTimestamp(3, new java.sql.Timestamp(outputVillages.crt_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_5.setNull(3, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputVillages.upd_utc != null) {
+                    if(outputVillages.upd_utc != null) {
 pstmtUpdate_tPostgresqlOutput_5.setTimestamp(4, new java.sql.Timestamp(outputVillages.upd_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_5.setNull(4, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputVillages.obslt_utc != null) {
+                    if(outputVillages.obslt_utc != null) {
 pstmtUpdate_tPostgresqlOutput_5.setTimestamp(5, new java.sql.Timestamp(outputVillages.obslt_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_5.setNull(5, java.sql.Types.TIMESTAMP);
 }
 
-                        if(outputVillages.sts_cs == null) {
+                    if(outputVillages.sts_cs == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(6, java.sql.Types.VARCHAR);
 } else {pstmtUpdate_tPostgresqlOutput_5.setString(6, outputVillages.sts_cs);
 }
 
-                        if(outputVillages.type_mnemonic == null) {
+                    if(outputVillages.type_mnemonic == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(7, java.sql.Types.VARCHAR);
 } else {pstmtUpdate_tPostgresqlOutput_5.setString(7, outputVillages.type_mnemonic);
 }
 
-                        if(outputVillages.parent_id == null) {
+                    if(outputVillages.parent_id == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(8, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_5.setObject(8, outputVillages.parent_id, java.sql.Types.OTHER);
 }
 
-                        if(outputVillages.plc_id == null) {
+
+                    if(outputVillages.plc_id == null) {
 pstmtUpdate_tPostgresqlOutput_5.setNull(9 + count_tPostgresqlOutput_5, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_5.setObject(9 + count_tPostgresqlOutput_5, outputVillages.plc_id);
 }
 
-                try {
-					
-                    updatedCount_tPostgresqlOutput_5 = updatedCount_tPostgresqlOutput_5 + pstmtUpdate_tPostgresqlOutput_5.executeUpdate();
-                    nb_line_tPostgresqlOutput_5++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_5 = true;
-                        nb_line_tPostgresqlOutput_5++;
-                            System.err.print(e.getMessage());
-                }
-            } else {
+
+            try {
+				
+                updateFlag_tPostgresqlOutput_5=pstmtUpdate_tPostgresqlOutput_5.executeUpdate();
+                updatedCount_tPostgresqlOutput_5 = updatedCount_tPostgresqlOutput_5+updateFlag_tPostgresqlOutput_5;
+				
+            if(updateFlag_tPostgresqlOutput_5 == 0) {
+            	
                         if(outputVillages.plc_id == null) {
 pstmtInsert_tPostgresqlOutput_5.setNull(1, java.sql.Types.OTHER);
 } else {pstmtInsert_tPostgresqlOutput_5.setObject(1, outputVillages.plc_id, java.sql.Types.OTHER);
@@ -21692,18 +20703,20 @@ pstmtInsert_tPostgresqlOutput_5.setNull(9, java.sql.Types.OTHER);
 } else {pstmtInsert_tPostgresqlOutput_5.setObject(9, outputVillages.parent_id, java.sql.Types.OTHER);
 }
 
-                try {
 					
                     insertedCount_tPostgresqlOutput_5 = insertedCount_tPostgresqlOutput_5 + pstmtInsert_tPostgresqlOutput_5.executeUpdate();
                     nb_line_tPostgresqlOutput_5++;
 					
+    	            }else{
+    					nb_line_tPostgresqlOutput_5++;
+     					
+    				}
                 } catch(java.lang.Exception e) {
 					
                     whetherReject_tPostgresqlOutput_5 = true;
                         nb_line_tPostgresqlOutput_5++;
                             System.err.print(e.getMessage());
                 }
-            }
             if(!whetherReject_tPostgresqlOutput_5) {
             }
 
@@ -21875,73 +20888,55 @@ if(row8 != null) {
 
 
         whetherReject_tPostgresqlOutput_6 = false;
-                    if(row8.fac_id == null) {
-pstmt_tPostgresqlOutput_6.setNull(1, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_6.setObject(1, row8.fac_id, java.sql.Types.OTHER);
-}
-
-                    if(row8.plc_id == null) {
-pstmt_tPostgresqlOutput_6.setNull(2, java.sql.Types.OTHER);
-} else {pstmt_tPostgresqlOutput_6.setObject(2, row8.plc_id, java.sql.Types.OTHER);
-}
-
-            int checkCount_tPostgresqlOutput_6 = -1;
-            try (java.sql.ResultSet rs_tPostgresqlOutput_6 = pstmt_tPostgresqlOutput_6.executeQuery()) {
-                while(rs_tPostgresqlOutput_6.next()) {
-                    checkCount_tPostgresqlOutput_6 = rs_tPostgresqlOutput_6.getInt(1);
-                }
-            }
-            if(checkCount_tPostgresqlOutput_6 > 0) {
-                        if(row8.crt_etl_id == null) {
+            int updateFlag_tPostgresqlOutput_6=0;
+                    if(row8.crt_etl_id == null) {
 pstmtUpdate_tPostgresqlOutput_6.setNull(1, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_6.setObject(1, row8.crt_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(row8.upd_etl_id == null) {
+                    if(row8.upd_etl_id == null) {
 pstmtUpdate_tPostgresqlOutput_6.setNull(2, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_6.setObject(2, row8.upd_etl_id, java.sql.Types.OTHER);
 }
 
-                        if(row8.crt_utc != null) {
+                    if(row8.crt_utc != null) {
 pstmtUpdate_tPostgresqlOutput_6.setTimestamp(3, new java.sql.Timestamp(row8.crt_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_6.setNull(3, java.sql.Types.TIMESTAMP);
 }
 
-                        if(row8.upd_utc != null) {
+                    if(row8.upd_utc != null) {
 pstmtUpdate_tPostgresqlOutput_6.setTimestamp(4, new java.sql.Timestamp(row8.upd_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_6.setNull(4, java.sql.Types.TIMESTAMP);
 }
 
-                        if(row8.obslt_utc != null) {
+                    if(row8.obslt_utc != null) {
 pstmtUpdate_tPostgresqlOutput_6.setTimestamp(5, new java.sql.Timestamp(row8.obslt_utc.getTime()));
 } else {
 pstmtUpdate_tPostgresqlOutput_6.setNull(5, java.sql.Types.TIMESTAMP);
 }
 
-                        if(row8.fac_id == null) {
+
+                    if(row8.fac_id == null) {
 pstmtUpdate_tPostgresqlOutput_6.setNull(6 + count_tPostgresqlOutput_6, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_6.setObject(6 + count_tPostgresqlOutput_6, row8.fac_id);
 }
 
-                        if(row8.plc_id == null) {
+
+                    if(row8.plc_id == null) {
 pstmtUpdate_tPostgresqlOutput_6.setNull(7 + count_tPostgresqlOutput_6, java.sql.Types.OTHER);
 } else {pstmtUpdate_tPostgresqlOutput_6.setObject(7 + count_tPostgresqlOutput_6, row8.plc_id);
 }
 
-                try {
-					
-                    updatedCount_tPostgresqlOutput_6 = updatedCount_tPostgresqlOutput_6 + pstmtUpdate_tPostgresqlOutput_6.executeUpdate();
-                    nb_line_tPostgresqlOutput_6++;
-					
-                } catch(java.lang.Exception e) {
-					
-                    whetherReject_tPostgresqlOutput_6 = true;
-                        nb_line_tPostgresqlOutput_6++;
-                            System.err.print(e.getMessage());
-                }
-            } else {
+
+            try {
+				
+                updateFlag_tPostgresqlOutput_6=pstmtUpdate_tPostgresqlOutput_6.executeUpdate();
+                updatedCount_tPostgresqlOutput_6 = updatedCount_tPostgresqlOutput_6+updateFlag_tPostgresqlOutput_6;
+				
+            if(updateFlag_tPostgresqlOutput_6 == 0) {
+            	
                         if(row8.fac_id == null) {
 pstmtInsert_tPostgresqlOutput_6.setNull(1, java.sql.Types.OTHER);
 } else {pstmtInsert_tPostgresqlOutput_6.setObject(1, row8.fac_id, java.sql.Types.OTHER);
@@ -21980,18 +20975,20 @@ pstmtInsert_tPostgresqlOutput_6.setTimestamp(7, new java.sql.Timestamp(row8.obsl
 pstmtInsert_tPostgresqlOutput_6.setNull(7, java.sql.Types.TIMESTAMP);
 }
 
-                try {
 					
                     insertedCount_tPostgresqlOutput_6 = insertedCount_tPostgresqlOutput_6 + pstmtInsert_tPostgresqlOutput_6.executeUpdate();
                     nb_line_tPostgresqlOutput_6++;
 					
+    	            }else{
+    					nb_line_tPostgresqlOutput_6++;
+     					
+    				}
                 } catch(java.lang.Exception e) {
 					
                     whetherReject_tPostgresqlOutput_6 = true;
                         nb_line_tPostgresqlOutput_6++;
                             System.err.print(e.getMessage());
                 }
-            }
             if(!whetherReject_tPostgresqlOutput_6) {
             }
 
@@ -22226,10 +21223,6 @@ end_Hash.put("tMap_4", System.currentTimeMillis());
             pstmtInsert_tPostgresqlOutput_5.close();
             resourceMap.remove("pstmtInsert_tPostgresqlOutput_5");
         }
-        if(pstmt_tPostgresqlOutput_5 != null) {
-            pstmt_tPostgresqlOutput_5.close();
-            resourceMap.remove("pstmt_tPostgresqlOutput_5");
-        }
     resourceMap.put("statementClosed_tPostgresqlOutput_5", true);
 
 	nb_line_deleted_tPostgresqlOutput_5=nb_line_deleted_tPostgresqlOutput_5+ deletedCount_tPostgresqlOutput_5;
@@ -22324,10 +21317,6 @@ end_Hash.put("tFilterRow_1", System.currentTimeMillis());
         if(pstmtInsert_tPostgresqlOutput_6 != null){
             pstmtInsert_tPostgresqlOutput_6.close();
             resourceMap.remove("pstmtInsert_tPostgresqlOutput_6");
-        }
-        if(pstmt_tPostgresqlOutput_6 != null) {
-            pstmt_tPostgresqlOutput_6.close();
-            resourceMap.remove("pstmt_tPostgresqlOutput_6");
         }
     resourceMap.put("statementClosed_tPostgresqlOutput_6", true);
 
@@ -22465,10 +21454,6 @@ end_Hash.put("tPostgresqlOutput_6", System.currentTimeMillis());
                 if ((pstmtInsertToClose_tPostgresqlOutput_5 = (java.sql.PreparedStatement) resourceMap.remove("pstmtInsert_tPostgresqlOutput_5")) != null) {
                     pstmtInsertToClose_tPostgresqlOutput_5.close();
                 }
-                java.sql.PreparedStatement pstmtToClose_tPostgresqlOutput_5 = null;
-                if ((pstmtToClose_tPostgresqlOutput_5 = (java.sql.PreparedStatement) resourceMap.remove("pstmt_tPostgresqlOutput_5")) != null) {
-                    pstmtToClose_tPostgresqlOutput_5.close();
-                }
     }
  
 
@@ -22525,10 +21510,6 @@ end_Hash.put("tPostgresqlOutput_6", System.currentTimeMillis());
                 java.sql.PreparedStatement pstmtInsertToClose_tPostgresqlOutput_6 = null;
                 if ((pstmtInsertToClose_tPostgresqlOutput_6 = (java.sql.PreparedStatement) resourceMap.remove("pstmtInsert_tPostgresqlOutput_6")) != null) {
                     pstmtInsertToClose_tPostgresqlOutput_6.close();
-                }
-                java.sql.PreparedStatement pstmtToClose_tPostgresqlOutput_6 = null;
-                if ((pstmtToClose_tPostgresqlOutput_6 = (java.sql.PreparedStatement) resourceMap.remove("pstmt_tPostgresqlOutput_6")) != null) {
-                    pstmtToClose_tPostgresqlOutput_6.close();
                 }
     }
  
@@ -29082,6 +28063,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     655903 characters generated by Talend Open Studio for Data Integration 
- *     on the November 3, 2020 12:14:45 EST PM
+ *     624873 characters generated by Talend Open Studio for Data Integration 
+ *     on the March 28, 2021 10:50:00 AM EDT
  ************************************************************************************************/
